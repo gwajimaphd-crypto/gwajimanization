@@ -77,8 +77,8 @@
         .hero-desc { color: var(--text-gray); font-size: 0.9rem; line-height: 1.6; margin-bottom: 25px; }
         .hero-btns { display: flex; gap: 10px; flex-wrap: wrap; }
 
-        .btn-live { background: #ef4444; color: #fff; border: none; padding: 10px 20px; border-radius: 20px; font-weight: 800; cursor: pointer; }
-        .btn-glass { background: rgba(255, 255, 255, 0.08); border: 1px solid var(--border-glass); color: #fff; padding: 10px 18px; border-radius: 20px; font-weight: 700; cursor: pointer; }
+        .btn-action-red { background: #ef4444; color: #fff; border: none; padding: 10px 18px; border-radius: 20px; font-weight: 800; cursor: pointer; font-size: 0.8rem; }
+        .btn-glass { background: rgba(255, 255, 255, 0.08); border: 1px solid var(--border-glass); color: #fff; padding: 10px 18px; border-radius: 20px; font-weight: 700; cursor: pointer; font-size: 0.8rem; }
 
         .hero-card { position: relative; padding: 15px; border-radius: 16px; }
         .hero-img { width: 100%; border-radius: 12px; display: block; }
@@ -95,56 +95,103 @@
         
         .section-title { font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 20px; border-left: 4px solid var(--gold); padding-left: 12px; }
 
-        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
-        .media-card { padding: 18px; display: flex; flex-direction: column; justify-content: space-between; }
-        .media-card img { width: 100%; border-radius: 10px; margin-bottom: 12px; }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+        .media-card { padding: 16px; display: flex; flex-direction: column; justify-content: space-between; height: 100%; }
+        .media-card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 10px; margin-bottom: 12px; }
         .card-tag { color: var(--gold); font-size: 0.68rem; font-weight: 800; }
-        .card-title { font-size: 0.95rem; margin: 6px 0; line-height: 1.3; }
+        .card-title { font-size: 0.9rem; margin: 6px 0; line-height: 1.35; color: #fff; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
         .btn-link { color: #ef4444; font-size: 0.8rem; font-weight: 800; text-decoration: none; margin-top: 10px; display: inline-block; }
 
-        /* PAYMENT & CONTACT */
-        .payment-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
-        .pay-card { padding: 30px; text-align: center; }
-        .pay-num { font-size: 1.3rem; color: var(--gold); font-weight: 800; margin: 10px 0; }
-        .btn-copy { background: var(--gold); border: none; padding: 8px 18px; border-radius: 8px; font-weight: 800; cursor: pointer; }
+        /* PAYMENT GRID (4 PAYMENT CARDS) */
+        .payment-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 20px; }
+        .pay-card { padding: 25px; text-align: center; }
+        .pay-card h3 { color: var(--gold); font-size: 1.1rem; margin-bottom: 8px; }
+        .pay-num { font-size: 1.1rem; font-weight: 800; margin: 10px 0; color: #fff; letter-spacing: 1px; }
+        .btn-copy { background: var(--gold); border: none; padding: 8px 18px; border-radius: 8px; font-weight: 800; cursor: pointer; color: #000; }
 
         /* FOOTER */
-        .main-footer { background: #000; padding: 40px 0 20px 0; border-top: 1px solid var(--border-glass); margin-top: 60px; }
-        .footer-container { max-width: 1280px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
-        .footer-bottom { text-align: center; margin-top: 20px; color: var(--text-gray); font-size: 0.75rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 15px; }
+        .main-footer { background: #000; padding: 25px 0; border-top: 1px solid var(--border-glass); margin-top: 60px; }
+        .footer-container { max-width: 1280px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
 
         @media (max-width: 850px) {
             .nav-links, .nav-btn-gold { display: none; }
             .hero-container { grid-template-columns: 1fr; }
             .hero-title { font-size: 2rem; }
-            .payment-grid { grid-template-columns: 1fr; }
         }
     </style>
 
     <script>
+        // Orodha ya Video zote 4 za YouTube
+        const videoList = [
+            { id: "TxVWgod5YVI", fallbackTitle: "Nguvu ya Maombi ya Usiku na Uponyaji" },
+            { id: "GdffYnGaTgA", fallbackTitle: "Kipaji Chako Cha Asili Na Tabia Yako" },
+            { id: "a2-h33_oTmY", fallbackTitle: "Ulimwengu Wa Siri Na Nguvu Za Rohoni" },
+            { id: "Jk0S1_ZfS20", fallbackTitle: "Je Dunia Ni Milki Ya Mungu Au Shetani?" }
+        ];
+
         function showSection(secId) {
-            var sections = document.querySelectorAll('.page-section');
-            sections.forEach(function(sec) {
-                sec.classList.remove('active-section');
-            });
+            document.querySelectorAll('.page-section').forEach(sec => sec.classList.remove('active-section'));
+            document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active-link'));
 
-            var navItems = document.querySelectorAll('.nav-item');
-            navItems.forEach(function(item) {
-                item.classList.remove('active-link');
-            });
+            const targetSec = document.getElementById('sec-' + secId);
+            if (targetSec) targetSec.classList.add('active-section');
 
-            var targetSec = document.getElementById('sec-' + secId);
-            if (targetSec) {
-                targetSec.classList.add('active-section');
-            }
-
-            var activeNav = document.getElementById('nav-' + secId);
-            if (activeNav) {
-                activeNav.classList.add('active-link');
-            }
+            const activeNav = document.getElementById('nav-' + secId);
+            if (activeNav) activeNav.classList.add('active-link');
 
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+
+        // Vuta YouTube Titles moja kwa moja
+        async function fetchYouTubeTitle(videoId, elementId, fallback) {
+            try {
+                const response = await fetch(`https://noembed.com/embed?url=https://www.youtube.com/watch?v=${videoId}`);
+                const data = await response.json();
+                if(data && data.title) {
+                    document.getElementById(elementId).innerText = data.title;
+                } else {
+                    document.getElementById(elementId).innerText = fallback;
+                }
+            } catch (err) {
+                document.getElementById(elementId).innerText = fallback;
+            }
+        }
+
+        function renderVideos() {
+            const containers = ['home-videos-grid', 'all-videos-grid'];
+            
+            containers.forEach(containerId => {
+                const container = document.getElementById(containerId);
+                if (!container) return;
+                container.innerHTML = '';
+
+                videoList.forEach((v, index) => {
+                    const card = document.createElement('div');
+                    card.className = 'media-card glass-card';
+                    const titleElemId = `yt-title-${containerId}-${index}`;
+
+                    card.innerHTML = `
+                        <div>
+                            <img src="https://img.youtube.com/vi/${v.id}/hqdefault.jpg" alt="Video Thumbnail">
+                            <span class="card-tag">VIDEO</span>
+                            <h4 class="card-title" id="${titleElemId}">Inapakia title...</h4>
+                        </div>
+                        <a href="https://youtu.be/${v.id}" target="_blank" class="btn-link">TAZAMA YOUTUBE &rarr;</a>
+                    `;
+                    container.appendChild(card);
+                    fetchYouTubeTitle(v.id, titleElemId, v.fallbackTitle);
+                });
+            });
+        }
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text);
+            alert("Namba ime-nakiliwa: " + text);
+        }
+
+        window.onload = function() {
+            renderVideos();
+        };
     </script>
 </head>
 <body>
@@ -182,9 +229,12 @@
                     <div class="gold-badge">GWAJIMANIZATION TEAM</div>
                     <h1 class="hero-title">SISI SI KANISA, <br><span class="gold-gradient-text">SISI NI FAMILIA.</span></h1>
                     <p class="hero-desc">Dkt. Josephat Gwajima ni Mchungaji Mkuu wa mojawapo ya makanisa makubwa zaidi Afrika Mashariki. Pia ni Askofu Mkuu na mwanzilishi wa Ufufuo na Uzima Ministries. Mungu amekuwa akimtumia katika huduma ya kufufua wafu, kuponya wagonjwa, na kutenda ishara na maajabu.</p>
+                    
                     <div class="hero-btns">
-                        <button onclick="showSection('live')" class="btn-live">WATCH LIVE <i class="fas fa-arrow-right"></i></button>
-                        <button onclick="showSection('videos')" class="btn-glass">WATCH VIDEOS</button>
+                        <button onclick="showSection('live')" class="btn-action-red"><i class="fas fa-broadcast-tower"></i> MUBASHARA</button>
+                        <button onclick="showSection('videos')" class="btn-glass"><i class="fas fa-video"></i> VIDEO</button>
+                        <button onclick="showSection('audios')" class="btn-glass"><i class="fas fa-headphones"></i> AUDIO</button>
+                        <button onclick="showSection('blog')" class="btn-glass"><i class="fas fa-newspaper"></i> BLOGU</button>
                     </div>
                 </div>
                 <div class="hero-card glass-card">
@@ -205,32 +255,7 @@
             </div>
 
             <h2 class="section-title">MAHUBIRI NA MASOMO MAPYA</h2>
-            <div class="cards-grid">
-                <div class="media-card glass-card">
-                    <img src="https://img.youtube.com/vi/TxVWgod5YVI/hqdefault.jpg" alt="Somo">
-                    <div>
-                        <span class="card-tag">VIDEO</span>
-                        <h4 class="card-title">Nguvu ya Maombi ya Usiku na Uponyaji</h4>
-                    </div>
-                    <a href="https://youtu.be/TxVWgod5YVI" target="_blank" class="btn-link">TAZAMA YOUTUBE &rarr;</a>
-                </div>
-                <div class="media-card glass-card">
-                    <img src="https://img.youtube.com/vi/GdffYnGaTgA/hqdefault.jpg" alt="Somo">
-                    <div>
-                        <span class="card-tag">VIDEO</span>
-                        <h4 class="card-title">Kipaji Cha Asili na Tabia Yako</h4>
-                    </div>
-                    <a href="https://youtu.be/GdffYnGaTgA" target="_blank" class="btn-link">TAZAMA YOUTUBE &rarr;</a>
-                </div>
-                <div class="media-card glass-card">
-                    <img src="https://img.youtube.com/vi/a2-h33_oTmY/hqdefault.jpg" alt="Somo">
-                    <div>
-                        <span class="card-tag">VIDEO</span>
-                        <h4 class="card-title">Kuvunja Laana za Kifamilia</h4>
-                    </div>
-                    <a href="https://youtu.be/a2-h33_oTmY" target="_blank" class="btn-link">TAZAMA YOUTUBE &rarr;</a>
-                </div>
-            </div>
+            <div class="cards-grid" id="home-videos-grid"></div>
         </section>
 
         <section id="sec-live" class="page-section">
@@ -245,29 +270,18 @@
 
         <section id="sec-videos" class="page-section">
             <h2 class="section-title">MASOMO NA MAFUNDISHO (VIDEO)</h2>
-            <div class="cards-grid">
-                <div class="media-card glass-card">
-                    <img src="https://img.youtube.com/vi/TxVWgod5YVI/hqdefault.jpg" alt="Somo">
-                    <span class="card-tag">VIDEO</span>
-                    <h4 class="card-title">Nguvu ya Maombi ya Usiku na Uponyaji</h4>
-                    <a href="https://youtu.be/TxVWgod5YVI" target="_blank" class="btn-link">TAZAMA YOUTUBE &rarr;</a>
-                </div>
-                <div class="media-card glass-card">
-                    <img src="https://img.youtube.com/vi/GdffYnGaTgA/hqdefault.jpg" alt="Somo">
-                    <span class="card-tag">VIDEO</span>
-                    <h4 class="card-title">Kipaji Cha Asili na Tabia Yako</h4>
-                    <a href="https://youtu.be/GdffYnGaTgA" target="_blank" class="btn-link">TAZAMA YOUTUBE &rarr;</a>
-                </div>
-            </div>
+            <div class="cards-grid" id="all-videos-grid"></div>
         </section>
 
         <section id="sec-audios" class="page-section">
             <h2 class="section-title">MASOMO YA SAUTI (AUDIO)</h2>
             <div class="cards-grid">
                 <div class="media-card glass-card">
-                    <span class="card-tag">AUDIO ARCHIVE</span>
-                    <h4 class="card-title">Kipaji Cha Asili na Tabia Yako</h4>
-                    <p style="color: var(--text-gray); font-size: 0.8rem; margin-bottom: 10px;">Askofu Dr. Josephat Gwajima</p>
+                    <div>
+                        <span class="card-tag">AUDIO ARCHIVE</span>
+                        <h4 class="card-title">Kipaji Cha Asili na Tabia Yako</h4>
+                        <p style="color: var(--text-gray); font-size: 0.8rem; margin-bottom: 10px;">Askofu Dr. Josephat Gwajima</p>
+                    </div>
                     <audio controls style="width: 100%; margin-top: 10px;">
                         <source src="audio1.mp3" type="audio/mpeg">
                     </audio>
@@ -279,53 +293,23 @@
             <h2 class="section-title">MAKALA NA BLOGU</h2>
             <div class="cards-grid">
                 <div class="media-card glass-card">
-                    <span class="card-tag">BLOGU</span>
-                    <h4 class="card-title">Nguvu ya Maombi ya Usiku</h4>
-                    <p style="color: var(--text-gray); font-size: 0.85rem; margin-top: 8px;">Jifunze jinsi maombi ya usiku yanavyovunja vifungo na kuleta majibu ya haraka katika maisha yako...</p>
+                    <div>
+                        <span class="card-tag">BLOGU</span>
+                        <h4 class="card-title">Nguvu ya Maombi ya Usiku</h4>
+                        <p style="color: var(--text-gray); font-size: 0.85rem; margin-top: 8px;">Jifunze jinsi maombi ya usiku yanavyovunja vifungo na kuleta majibu ya haraka...</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="sec-give" class="page-section">
-            <h2 class="section-title">TOA SADAKA / CHANGO</h2>
+            <h2 class="section-title">SAPOTI HUDUMA YA ASKOFU GWAJIMA</h2>
             <div class="payment-grid">
                 <div class="pay-card glass-card">
                     <h3>M-PESA</h3>
                     <p class="pay-num">+255 763 432 025</p>
-                    <button class="btn-copy" onclick="alert('Namba ime-nakiliwa!')">NAKILI NAMBA</button>
+                    <button class="btn-copy" onclick="copyToClipboard('+255763432025')">NAKILI NAMBA</button>
                 </div>
                 <div class="pay-card glass-card">
                     <h3>AIRTEL MONEY</h3>
-                    <p class="pay-num">+255 787 485 811</p>
-                    <button class="btn-copy" onclick="alert('Namba ime-nakiliwa!')">NAKILI NAMBA</button>
-                </div>
-            </div>
-        </section>
-
-        <section id="sec-contact" class="page-section">
-            <h2 class="section-title">MAWASILIANO & SOCIAL MEDIA</h2>
-            <div class="glass-card" style="padding: 30px; text-align: center;">
-                <p style="margin-bottom: 20px; color: var(--text-gray);">Tufuatilie kwenye mitandao ya kijamii:</p>
-                <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-                    <a href="https://wa.me/255763432025" target="_blank" class="btn-glass" style="background:#25D366; color:#fff;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                    <a href="https://www.tiktok.com/@gwajimanization_" target="_blank" class="btn-glass"><i class="fab fa-tiktok"></i> TikTok</a>
-                </div>
-            </div>
-        </section>
-
-    </div>
-
-    <footer class="main-footer">
-        <div class="footer-container">
-            <div>
-                <span class="logo-text">GWAJIMANIZATION</span>
-                <p style="color:var(--text-gray); font-size:0.8rem; margin-top:5px;">Huduma ya Ufufuo na Uzima Ministries.</p>
-            </div>
-            <div style="color:var(--text-gray); font-size:0.8rem;">
-                &copy; 2026 GWAJIMANIZATION TEAM. All Rights Reserved.
-            </div>
-        </div>
-    </footer>
-
-</body>
-</html>
+                    <p class="pay-num">+255 787 4
