@@ -417,3 +417,29 @@ html {
     background-color: #ff0000;
     border-color: #ff0000;
 }
+.hero-btns button {
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 12px 20px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.hero-btns .btn-dark {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.hero-btns .btn-outline {
+    background-color: transparent;
+    border: 1px solid #333333;
+    color: #ffffff;
+}
+
+.hero-btns .btn-outline:hover {
+    border-color: #ff0000;
+    color: #ff0000;
+}
