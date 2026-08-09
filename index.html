@@ -27,24 +27,27 @@
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero-section">
-        <div class="hero-container">
-            <div class="hero-text">
-                <span class="badge-tag">GWAJIMANIZATION</span>
-                <h1 class="hero-title">WE'RE NOT JUST A CHURCH,<br><span class="highlight">WE'RE A MOVEMENT</span></h1>
-                <p class="hero-desc">Welcome to Gwajimanization. Join Bishop Josephat Gwajima in exploring faith, power, and transformation.</p>
-                <div class="hero-btns">
-                   <a href="#videos" class="btn-dark">WATCH VIDEOS</a>
-<a href="#audios" class="btn-outline">LISTEN AUDIOS</a>
-<a href="#blog" class="btn-outline">READ BLOG</a>
-                </div>
-            </div>
-            <div class="hero-image-box">
-                <img src="askofu.jpg" alt="Bishop Josephat Gwajima" class="hero-img">
+   <!-- HERO SECTION -->
+<section class="hero-section">
+    <div class="hero-container">
+        <div class="hero-text">
+            <span class="badge-tag">GWAJIMANIZATION</span>
+            <h1 class="hero-title">WE'RE NOT JUST A CHURCH,<br><span class="highlight">WE'RE A MOVEMENT</span></h1>
+            <p class="hero-desc">Welcome to Gwajimanization. Join Bishop Josephat Gwajima in exploring faith, power, and transformation.</p>
+
+            <!-- VIFUNGO VYA HERO SECTION -->
+            <div class="hero-btns">
+                <button onclick="showTab('videos')" class="btn-dark">WATCH VIDEOS</button>
+                <button onclick="showTab('audios')" class="btn-outline">LISTEN AUDIOS</button>
+                <button onclick="showTab('blog')" class="btn-outline">READ BLOG</button>
             </div>
         </div>
-    </section>
+
+        <div class="hero-image-box">
+            <img src="askofu.jpg" alt="Bishop Josephat Gwajima" class="hero-img">
+        </div>
+    </div>
+</section>
 
    <!-- SECTION 1: VIDEO MESSAGES -->
     <section id="videos" class="content-section">
@@ -211,6 +214,25 @@
             </div>
         </div>
     </footer>
+    <script>
+function showTab(tabId) {
+    // 1. Ficha sehemu zote tatu mwanzo
+    const sections = ['videos', 'audios', 'blog'];
+    sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.classList.remove('tab-active');
+    });
+
+    // 2. Onyesha tu sehemu iliyobonyezwa
+    const activeSection = document.getElementById(tabId);
+    if (activeSection) {
+        activeSection.classList.add('tab-active');
+        
+        // 3. Shusha ukurasa polepole mpaka kwenye hiyo sehemu
+        activeSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+</script>
 
 </body>
 </html>
