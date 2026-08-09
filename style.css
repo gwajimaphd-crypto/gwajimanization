@@ -835,3 +835,152 @@ button:hover .icon-slide, a:hover .icon-slide {
         display: block;
     }
 }
+/* ==========================================================================
+   MOBILE RESPONSIVE FIXES (PREMIUM APP-LIKE LAYOUT)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    /* Header & Navigation Fixes */
+    .main-header {
+        padding: 12px 0 !important;
+    }
+
+    .header-container {
+        padding: 0 16px !important;
+    }
+
+    .logo-icon-wrap {
+        width: 36px !important;
+        height: 36px !important;
+        border-radius: 10px !important;
+    }
+
+    .logo-text {
+        font-size: 1.05rem !important;
+    }
+
+    .logo-subtext {
+        font-size: 0.55rem !important;
+        letter-spacing: 1.5px !important;
+    }
+
+    .mobile-toggle {
+        display: block !important;
+        font-size: 1.3rem !important;
+    }
+
+    /* Hero Section Fixes */
+    .hero-section {
+        padding: 100px 0 40px 0 !important;
+        min-height: auto !important;
+    }
+
+    .hero-container {
+        padding: 0 16px !important;
+        gap: 30px !important;
+        grid-template-columns: 1fr !important;
+    }
+
+    .gold-badge {
+        font-size: 0.65rem !important;
+        padding: 6px 14px !important;
+        margin-bottom: 16px !important;
+        letter-spacing: 1px !important;
+    }
+
+    .hero-title {
+        font-size: 2.1rem !important; /* Inapunguza ukubwa wa maandishi makuu kwenye simu */
+        line-height: 1.15 !important;
+        margin-bottom: 16px !important;
+    }
+
+    .hero-desc {
+        font-size: 0.92rem !important;
+        line-height: 1.55 !important;
+        margin-bottom: 25px !important;
+    }
+
+    .hero-btns {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important; /* Inapanga vitufe vizuri 2 kwa 2 */
+        gap: 10px !important;
+    }
+
+    .btn-live {
+        grid-column: span 2 !important; /* Kitufe cha Live kinachukua upana wote */
+        justify-content: center !important;
+        padding: 14px 20px !important;
+        font-size: 0.85rem !important;
+    }
+
+    .btn-glass {
+        padding: 12px 14px !important;
+        font-size: 0.75rem !important;
+        text-align: center !important;
+        white-space: nowrap !important;
+    }
+
+    .hero-img-badge {
+        bottom: 15px !important;
+        left: 15px !important;
+        right: 15px !important;
+        padding: 12px 16px !important;
+        gap: 12px !important;
+    }
+
+    .hero-img-badge h4 {
+        font-size: 0.85rem !important;
+    }
+
+    .hero-img-badge p {
+        font-size: 0.7rem !important;
+    }
+
+    /* Search Section Fix */
+    .search-section {
+        margin: -10px auto 40px auto !important;
+        padding: 0 16px !important;
+    }
+
+    .search-container {
+        padding: 8px 16px !important;
+    }
+
+    .search-container input {
+        font-size: 0.88rem !important;
+    }
+
+    .search-btn {
+        padding: 8px 14px !important;
+        font-size: 0.75rem !important;
+    }
+
+    /* Editorial & Cards Grid Fixes */
+    .featured-editorial {
+        padding: 20px !important;
+    }
+
+    .about-text-side h2 {
+        font-size: 1.6rem !important;
+    }
+
+    .section-header h2 {
+        font-size: 1.6rem !important;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .media-card {
+        padding: 20px !important;
+    }
+
+    /* Footer Fix */
+    .footer-container {
+        grid-template-columns: 1fr !important;
+        gap: 35px !important;
+        padding: 0 16px !important;
+    }
+}
