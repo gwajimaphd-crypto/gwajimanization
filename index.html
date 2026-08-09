@@ -29,14 +29,14 @@
 
             <nav class="nav-links">
                 <a href="javascript:void(0)" onclick="goHome()" class="nav-item">ABOUT</a>
-                <a href="#live" onclick="showTab('live')" class="nav-item live-link">
+                <a href="javascript:void(0)" onclick="showTab('live')" class="nav-item live-link">
                     <span class="live-pulse-dot"></span> MUBASHARA
                 </a>
-                <a href="#videos" onclick="showTab('videos')" class="nav-item">VIDEO</a>
-                <a href="#audios" onclick="showTab('audios')" class="nav-item">AUDIO</a>
-                <a href="#blog" onclick="showTab('blog')" class="nav-item">BLOGU</a>
-                <a href="#give" class="nav-item">SADAKA</a>
-                <a href="#contact" class="nav-item">MAWASILIANO</a>
+                <a href="javascript:void(0)" onclick="showTab('videos')" class="nav-item">VIDEO</a>
+                <a href="javascript:void(0)" onclick="showTab('audios')" class="nav-item">AUDIO</a>
+                <a href="javascript:void(0)" onclick="showTab('blog')" class="nav-item">BLOGU</a>
+                <a href="javascript:void(0)" onclick="showTab('give')" class="nav-item">SADAKA</a>
+                <a href="javascript:void(0)" onclick="showTab('contact')" class="nav-item">MAWASILIANO</a>
             </nav>
 
             <div class="nav-right">
@@ -87,7 +87,33 @@
         </div>
     </section>
 
-    <!-- SECTION 0: MUBASHARA (LIVE STREAMING) -->
+    <!-- ABOUT SECTION (Inaonekana Home) -->
+    <section id="about" class="about-section">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-image-side">
+                    <div class="about-img-frame">
+                        <img src="askofu.jpg" alt="Kuhusu Gwajimanization">
+                    </div>
+                </div>
+                <div class="about-text-side">
+                    <span class="sub-title">KUHUSU GWAJIMANIZATION</span>
+                    <h2>HUDUMA YENYE ISHARA NA MAAJABU</h2>
+                    <p>
+                        Dkt. Josephat Gwajima ni Mchungaji Mkuu wa mojawapo ya makanisa makubwa zaidi Afrika Mashariki. Pia ni Askofu Mkuu na mwanzilishi wa Ufufuo na Uzima Ministries.
+                    </p>
+                    <p>
+                        Mungu amekuwa akimtumia katika huduma ya kufufua wafu, kuponya wagonjwa, na kutenda ishara na maajabu kwa jina la Yesu Kristo.
+                    </p>
+                    <button onclick="showTab('videos')" class="btn-gold-action">
+                        TAZAMA SHUHUDA <i class="fas fa-angle-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 0: MUBASHARA (LIVE STREAMING) - IMEFICHWA HADI IBONYEZWE -->
     <section id="live" class="content-section tab-content">
         <div class="section-container">
             <div class="section-header">
@@ -118,7 +144,7 @@
         </div>
     </section>
 
-    <!-- SECTION 1: LATEST TEACHINGS / VIDEO -->
+    <!-- SECTION 1: VIDEO - IMEFICHWA HADI IBONYEZWE -->
     <section id="videos" class="content-section tab-content">
         <div class="section-container">
             <div class="section-header">
@@ -140,7 +166,7 @@
         </div>
     </section>
 
-    <!-- SECTION 2: AUDIO MESSAGES -->
+    <!-- SECTION 2: AUDIO - IMEFICHWA HADI IBONYEZWE -->
     <section id="audios" class="content-section tab-content">
         <div class="section-container">
             <div class="section-header">
@@ -194,7 +220,7 @@
         </div>
     </section>
 
-    <!-- SECTION 3: BLOG / ARTICLES -->
+    <!-- SECTION 3: BLOG - IMEFICHWA HADI IBONYEZWE -->
     <section id="blog" class="content-section tab-content">
         <div class="section-container">
             <div class="section-header">
@@ -224,34 +250,8 @@
         </div>
     </section>
 
-    <!-- ABOUT SECTION -->
-    <section id="about" class="about-section">
-        <div class="section-container">
-            <div class="about-grid">
-                <div class="about-image-side">
-                    <div class="about-img-frame">
-                        <img src="askofu.jpg" alt="Kuhusu Gwajimanization">
-                    </div>
-                </div>
-                <div class="about-text-side">
-                    <span class="sub-title">KUHUSU GWAJIMANIZATION</span>
-                    <h2>HUDUMA YENYE ISHARA NA MAAJABU</h2>
-                    <p>
-                        Dkt. Josephat Gwajima ni Mchungaji Mkuu wa mojawapo ya makanisa makubwa zaidi Afrika Mashariki. Pia ni Askofu Mkuu na mwanzilishi wa Ufufuo na Uzima Ministries.
-                    </p>
-                    <p>
-                        Mungu amekuwa akimtumia katika huduma ya kufufua wafu, kuponya wagonjwa, na kutenda ishara na maajabu kwa jina la Yesu Kristo.
-                    </p>
-                    <button onclick="showTab('videos')" class="btn-gold-action">
-                        TAZAMA SHUHUDA <i class="fas fa-angle-right"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 4: GIVE & SUPPORT (SADAKA) -->
-    <section id="give" class="give-section">
+    <!-- SECTION 4: GIVE & SUPPORT (SADAKA) - IMEFICHWA HADI IBONYEZWE -->
+    <section id="give" class="give-section tab-content">
         <div class="section-container">
             <div class="section-header text-center">
                 <span class="sub-title">SADAKA NA SHUKRANI</span>
@@ -305,10 +305,16 @@
                 <i class="fas fa-check-circle"></i>
                 <span>Jina litakaloonekana wakati wa kutuma: <strong>Josephat Gwajima</strong></span>
             </div>
+
+            <div class="scroll-top-wrap">
+                <button onclick="goHome()" class="btn-back-home">
+                    <i class="fas fa-arrow-up"></i> RUDI JUU / HOME
+                </button>
+            </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- FOOTER / MAWASILIANO -->
     <footer id="contact" class="main-footer">
         <div class="footer-container">
             <div class="footer-col brand-col">
@@ -327,11 +333,11 @@
                 <h4>QUICK LINKS</h4>
                 <ul>
                     <li><a href="javascript:void(0)" onclick="goHome()">About</a></li>
-                    <li><a href="#live" onclick="showTab('live')">Mubashara</a></li>
-                    <li><a href="#videos" onclick="showTab('videos')">Video</a></li>
-                    <li><a href="#audios" onclick="showTab('audios')">Audio</a></li>
-                    <li><a href="#blog" onclick="showTab('blog')">Blogu</a></li>
-                    <li><a href="#give">Sadaka</a></li>
+                    <li><a href="javascript:void(0)" onclick="showTab('live')">Mubashara</a></li>
+                    <li><a href="javascript:void(0)" onclick="showTab('videos')">Video</a></li>
+                    <li><a href="javascript:void(0)" onclick="showTab('audios')">Audio</a></li>
+                    <li><a href="javascript:void(0)" onclick="showTab('blog')">Blogu</a></li>
+                    <li><a href="javascript:void(0)" onclick="showTab('give')">Sadaka</a></li>
                 </ul>
             </div>
 
@@ -393,10 +399,26 @@
             });
         }
 
-        // Show specific Tab section
+        // Show specific Tab section and hide others
         function showTab(tabId, btnElement) {
-            const tabs = ['live', 'videos', 'audios', 'blog'];
+            const tabs = ['live', 'videos', 'audios', 'blog', 'give'];
             
+            // Ukibonyeza Mawasiliano -> Shuka kwenye Footer moja kwa moja
+            if (tabId === 'contact') {
+                // Ficha sehemu zingine zote za Tab
+                tabs.forEach(id => {
+                    const el = document.getElementById(id);
+                    if (el) el.classList.remove('active-tab');
+                });
+                
+                const contactEl = document.getElementById('contact');
+                if (contactEl) {
+                    contactEl.scrollIntoView({ behavior: 'smooth' });
+                }
+                return;
+            }
+
+            // Onyesha tab iliyobonyezwa pekee, fichua zingine
             tabs.forEach(id => {
                 const el = document.getElementById(id);
                 if (el) {
@@ -409,7 +431,7 @@
                 }
             });
 
-            // Handle Active state for White Buttons -> Change to GREEN (#22c55e)
+            // Badilisha Rangi ya Vifungo vya Hero kuwa Kijani (#22c55e)
             if (btnElement && !btnElement.classList.contains('btn-live')) {
                 const whiteBtns = document.querySelectorAll('.hero-btns .btn-white');
                 whiteBtns.forEach(btn => btn.classList.remove('btn-active'));
@@ -419,7 +441,7 @@
 
         // Return Home Function
         function goHome() {
-            const tabs = ['live', 'videos', 'audios', 'blog'];
+            const tabs = ['live', 'videos', 'audios', 'blog', 'give'];
             tabs.forEach(id => {
                 const el = document.getElementById(id);
                 if (el) {
