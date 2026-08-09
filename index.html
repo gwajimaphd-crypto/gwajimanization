@@ -1,188 +1,114 @@
 <!DOCTYPE html>
 <html lang="sw">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Gwajimanization - Mahubiri, mafundisho na neno la Mungu.">
-  <title>Gwajimanization | Neno la Mungu</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GWAJIMANIZATION - Mahubiri & Mafundisho</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="#home"><span>G</span> GWАJIMANIZATION</a>
-      <button class="menu-btn" aria-label="Fungua menu">☰</button>
-      <nav id="navLinks">
-        <a href="#home">Home</a>
-        <a href="#mahubiri">Mahubiri</a>
-        <a href="#neno">Neno</a>
-        <a href="#sadaka">Sadaka</a>
-        <a href="#about">Kuhusu</a>
-        <a href="#contact">Mawasiliano</a>
-      </nav>
-    </div>
-  </header>
 
-  <main>
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="logo.png" alt="Gwajimanization Logo" class="nav-logo">
+                <span class="brand-name">GWAJIMANIZATION</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Kuhusu Sisi</a></li>
+                <li><a href="#mahubiri">Mahubiri</a></li>
+                <li><a href="#sadaka">Sadaka</a></li>
+                <li><a href="#contact">Mawasiliano</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
     <section id="home" class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">KARIBU GWАJIMANIZATION</p>
-          <h1>Neno la Mungu kwa <em>maisha yako.</em></h1>
-          <p class="hero-text">
-            Sikiliza mahubiri, mafundisho na ujumbe wa Neno la Mungu.
-            Mungu akubariki na akutie nguvu katika safari yako ya imani.
-          </p>
-          <div class="hero-actions">
-            <a class="btn primary" href="#mahubiri">🎧 Sikiliza Mahubiri</a>
-            <a class="btn secondary" href="#sadaka">🙏 Toa Sadaka</a>
-          </div>
-        </div>
-        <div class="hero-card">
-          <div class="cross">✝</div>
-          <p>“Imani huja kwa kusikia, na kusikia huja kwa neno la Kristo.”</p>
-          <small>Warumi 10:17</small>
-        </div>
-      </div>
-    </section>
-
-    <section id="mahubiri" class="section">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">MAHUBIRI</p>
-            <h2>Sikiliza Mahubiri</h2>
-          </div>
-          <p>Weka audio zako kwenye folder <strong>audio/</strong> na uziorodheshe hapa.</p>
-        </div>
-
-        <div class="sermon-list">
-          <article class="sermon">
-            <div class="sermon-icon">🎙️</div>
-            <div class="sermon-info">
-              <span>MAHUBIRI MAPYA</span>
-              <h3>Mahubiri ya Kwanza</h3>
-              <p>Askofu Gwajima • Weka tarehe hapa</p>
-              <audio controls preload="none">
-                <source src="audio/mahubiri-1.mp3" type="audio/mpeg">
-                Browser yako haiwezi kucheza audio hii.
-              </audio>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Karibu GWAJIMANIZATION</h1>
+                <p>Kituo cha mtandaoni kinachokusogezea mahubiri, mafundisho na ujumbe mbalimbali wa kiroho kutoka kwa Askofu Gwajima.</p>
+                <div class="hero-btns">
+                    <a href="#mahubiri" class="btn primary-btn"><i class="fas fa-headphones"></i> Sikiliza Mahubiri</a>
+                    <a href="#sadaka" class="btn secondary-btn"><i class="fas fa-hand-holding-heart"></i> Toa Sadaka</a>
+                </div>
             </div>
-          </article>
-
-          <article class="sermon">
-            <div class="sermon-icon">🎙️</div>
-            <div class="sermon-info">
-              <span>MAFUNDISHO</span>
-              <h3>Ujumbe wa Pili</h3>
-              <p>Askofu Gwajima • Weka tarehe hapa</p>
-              <audio controls preload="none">
-                <source src="audio/mahubiri-2.mp3" type="audio/mpeg">
-                Browser yako haiwezi kucheza audio hii.
-              </audio>
+            <div class="hero-image">
+                <img src="askofu.jpg" alt="Askofu Gwajima" class="profile-img">
             </div>
-          </article>
+        </div>
+    </section>
 
-          <article class="sermon">
-            <div class="sermon-icon">🎙️</div>
-            <div class="sermon-info">
-              <span>NENO LA MUNGU</span>
-              <h3>Ujumbe wa Tatu</h3>
-              <p>Askofu Gwajima • Weka tarehe hapa</p>
-              <audio controls preload="none">
-                <source src="audio/mahubiri-3.mp3" type="audio/mpeg">
-                Browser yako haiwezi kucheza audio hii.
-              </audio>
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section">
+        <h2>Kuhusu Gwajimanization</h2>
+        <div class="about-card">
+            <p>Kupitia website hii, utapata kwa urahisi mahubiri ya video, mafundisho ya Biblia, jumbe za kiroho na vipindi mbalimbali, vilivyokusanywa katika sehemu moja ili kukusaidia kusikiliza, kutazama na kujifunza wakati wowote na mahali popote.</p>
+            <p><strong>Lengo letu:</strong> Kufanya mafundisho na mahubiri ya Askofu Gwajima yawe rahisi kupatikana kwa watu wengi zaidi kupitia teknolojia ya kidigitali.</p>
+            <div class="motto">Sikiliza. Jifunze. Jengwa. Shiriki.</div>
+        </div>
+    </section>
+
+    <!-- MAHUBIRI SECTION -->
+    <section id="mahubiri" class="sermons-section">
+        <h2>Mahubiri & Mafundisho</h2>
+        <p class="section-subtitle">Sikiliza jumbe na mafundisho mapya ya kiroho.</p>
+        
+        <div class="sermons-grid">
+            <!-- Example Sermon Box -->
+            <div class="sermon-card">
+                <div class="sermon-tag">Audio</div>
+                <h3>Mahubiri ya Kwanza (Mfano)</h3>
+                <p class="sermon-speaker"><i class="fas fa-user-tie"></i> Askofu Gwajima</p>
+                <audio controls>
+                    <source src="" type="audio/mpeg">
+                    Browser yako haitambui audio player.
+                </audio>
             </div>
-          </article>
         </div>
-      </div>
     </section>
 
-    <section id="neno" class="section dark-section">
-      <div class="container split">
-        <div>
-          <p class="eyebrow">NENO LA LEO</p>
-          <h2>Usikate tamaa.</h2>
-          <p class="large">
-            Endelea kumtumaini Mungu hata wakati huoni njia. Neno lake ni taa
-            ya miguu yetu na mwanga wa njia yetu.
-          </p>
-          <p class="verse">“Neno lako ni taa ya miguu yangu, na mwanga wa njia yangu.”</p>
-          <small>Zaburi 119:105</small>
+    <!-- SADAKA SECTION -->
+    <section id="sadaka" class="giving-section">
+        <h2>Toa Sadaka / Bariki Huduma</h2>
+        <p>Kama umeguswa na huduma hii na unataka kutoa sadaka au kuunga mkono kazi ya Mungu:</p>
+        
+        <div class="payment-grid">
+            <div class="pay-card mpesa">
+                <h3><i class="fas fa-mobile-alt"></i> M-PESA</h3>
+                <p class="pay-number">0766 405 739</p>
+            </div>
+            <div class="pay-card tigo">
+                <h3><i class="fas fa-mobile-alt"></i> TIGO PESA</h3>
+                <p class="pay-number">0652 291 937</p>
+            </div>
+            <div class="pay-card halo">
+                <h3><i class="fas fa-mobile-alt"></i> HALOPESA</h3>
+                <p class="pay-number">0620 164 130</p>
+            </div>
         </div>
-        <div class="quote-box">
-          <span>✦</span>
-          <p>“Mungu bado ana mpango na maisha yako.”</p>
-        </div>
-      </div>
     </section>
 
-    <section id="sadaka" class="section offering">
-      <div class="container offering-card">
-        <div>
-          <p class="eyebrow">USHIRIKI WA INJILI</p>
-          <h2>Toa Sadaka</h2>
-          <p>
-            Kama umebarikiwa kupitia huduma hii na umeongozwa kushiriki,
-            unaweza kutoa sadaka kupitia njia rasmi za kanisa.
-          </p>
-          <p class="note">⚠️ Weka hapa namba rasmi za kanisa kabla ya kuchapisha website.</p>
+    <!-- CONTACT & SOCIALS -->
+    <section id="contact" class="contact-section">
+        <h2>Mawasiliano & Mitandao ya Jamii</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp:</strong> +255 766 405 739</p>
+                <p><i class="fab fa-tiktok"></i> <strong>TikTok:</strong> @gwajimanization_</p>
+            </div>
         </div>
-        <div class="giving-methods">
-          <div class="method">
-            <strong>📱 M-Pesa</strong>
-            <span>+255 XXX XXX XXX</span>
-          </div>
-          <div class="method">
-            <strong>📱 Tigo Pesa</strong>
-            <span>+255 XXX XXX XXX</span>
-          </div>
-          <div class="method">
-            <strong>🏦 Benki</strong>
-            <span>Jina la akaunti / namba ya akaunti</span>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <section id="about" class="section">
-      <div class="container about">
-        <div>
-          <p class="eyebrow">KUHUSU SISI</p>
-          <h2>Gwajimanization ni nini?</h2>
-        </div>
-        <p>
-          Gwajimanization ni jukwaa la kidijitali la kushirikisha mahubiri,
-          mafundisho, nyimbo na ujumbe wa Neno la Mungu. Lengo ni kuwafikia
-          watu wengi zaidi kupitia teknolojia na kuwasaidia kukua katika imani.
-        </p>
-      </div>
-    </section>
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 GWAJIMANIZATION. Haki zote zimehifadhiwa.</p>
+    </footer>
 
-    <section id="contact" class="section contact-section">
-      <div class="container contact">
-        <div>
-          <p class="eyebrow">MAWASILIANO</p>
-          <h2>Wasiliana nasi</h2>
-          <p>Weka mawasiliano rasmi ya kanisa hapa.</p>
-        </div>
-        <div class="contact-links">
-          <a href="tel:+255000000000">📞 +255 XXX XXX XXX</a>
-          <a href="mailto:info@gwajimanization.org">✉️ info@example.com</a>
-          <a href="#" aria-label="WhatsApp">💬 WhatsApp</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-inner">
-      <strong>GWАJIMANIZATION</strong>
-      <span>© <span id="year"></span> Gwajimanization. All rights reserved.</span>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
