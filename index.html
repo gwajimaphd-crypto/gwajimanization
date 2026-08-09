@@ -3,67 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GWAJIMANIZATION | Welcome Home</title>
-    <link rel="stylesheet" href="style.css?v=6.0">
+    <title>GWAJIMANIZATION - Welcome Home</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- NAVIGATION BAR -->
-    <header class="top-nav">
-        <div class="nav-wrapper">
-            <a href="#" class="brand-logo-container">
-                <img src="logo.svg" alt="Gwajimanization Logo" class="site-logo">
-            </a>
-            <nav class="nav-links">
-                <a href="#about">ABOUT</a>
-                <a href="#videos">VIDEOS</a>
-                <a href="#audios">AUDIOS</a>
-                <a href="#give">GIVE</a>
-                <a href="#contact">CONTACT</a>
-            </nav>
-            <a href="#videos" class="nav-btn">LATEST MESSAGES</a>
+    <!-- HEADER / NAVIGATION -->
+    <header class="main-header">
+        <div class="logo-box">
+            <span class="logo-text">GWAJIMANIZATION</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#">ABOUT</a>
+            <a href="#videos" onclick="showTab('videos')">VIDEOS</a>
+            <a href="#audios" onclick="showTab('audios')">AUDIOS</a>
+            <a href="#blog" onclick="showTab('blog')">BLOG</a>
+            <a href="#give">GIVE</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+        <div class="nav-right">
+            <button onclick="showTab('videos')" class="nav-btn">LATEST MESSAGES</button>
         </div>
     </header>
 
-   <!-- HERO SECTION -->
-<section class="hero-section">
-    <div class="hero-container">
-        <div class="hero-text">
-            <span class="badge-tag">GWAJIMANIZATION</span>
-            <h1 class="hero-title">WE'RE NOT JUST A CHURCH,<br><span class="highlight">WE'RE A MOVEMENT</span></h1>
-            <p class="hero-desc">Welcome to Gwajimanization. Join Bishop Josephat Gwajima in exploring faith, power, and transformation.</p>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-text">
+                <span class="badge-tag">GWAJIMANIZATION</span>
+                <h1 class="hero-title">WE'RE NOT JUST A CHURCH,<br><span class="highlight">WE'RE A MOVEMENT</span></h1>
+                <p class="hero-desc">Welcome to Gwajimanization. Join Bishop Josephat Gwajima in exploring faith, power, and transformation.</p>
 
-            <!-- VIFUNGO VYA HERO SECTION -->
-            <div class="hero-btns">
-                <button onclick="showTab('videos')" class="btn-dark">WATCH VIDEOS</button>
-                <button onclick="showTab('audios')" class="btn-outline">LISTEN AUDIOS</button>
-                <button onclick="showTab('blog')" class="btn-outline">READ BLOG</button>
+                <!-- VIFUNGO VYA HERO SECTION -->
+                <div class="hero-btns">
+                    <button onclick="showTab('videos')" class="btn-dark">WATCH VIDEOS</button>
+                    <button onclick="showTab('audios')" class="btn-outline">LISTEN AUDIOS</button>
+                    <button onclick="showTab('blog')" class="btn-outline">READ BLOG</button>
+                </div>
+            </div>
+
+            <div class="hero-image-box">
+                <img src="askofu.jpg" alt="Bishop Josephat Gwajima" class="hero-img">
             </div>
         </div>
+    </section>
 
-        <div class="hero-image-box">
-            <img src="askofu.jpg" alt="Bishop Josephat Gwajima" class="hero-img">
-        </div>
-    </div>
-</section>
-
-   <!-- SECTION 1: VIDEO MESSAGES -->
-    <section id="videos" class="content-section">
+    <!-- SECTION 1: VIDEO MESSAGES (ZIMEFICHWA MWANZO) -->
+    <section id="videos" class="content-section tab-content">
         <div class="section-header">
             <span class="sub-title">YOUTUBE MEDIA</span>
             <h2>MASOMO YA VIDEO</h2>
         </div>
 
-        <!-- Hapa ndipo kadi zitawekwa moja kwa moja na mfumo -->
         <div class="cards-grid" id="youtube-auto-grid">
             <p style="color: #9ca3af; text-align: center; width: 100%;">Inaleta video kutoka YouTube...</p>
         </div>
     </section>
 
-    <!-- KODI YA KUVUTA TITLES NA KAVA MOJA KWA MOJA KUTOKA YOUTUBE -->
+    <!-- SECTION 2: AUDIO MESSAGES (ZIMEFICHWA MWANZO) -->
+    <section id="audios" class="content-section tab-content">
+        <div class="section-header">
+            <span class="sub-title">AUDIO LIBRARY</span>
+            <h2>MASOMO YA SAUTI (AUDIO)</h2>
+        </div>
+
+        <div class="cards-grid">
+            <!-- Audio 1 -->
+            <div class="card">
+                <div class="card-body">
+                    <span class="card-tag">AUDIO SERMON</span>
+                    <h4 class="sermon-title">Kipaji Cha Asili na Tabia Yako</h4>
+                    <p class="sermon-speaker">Bishop Josephat Gwajima</p>
+                    <audio controls style="width: 100%; margin-top: 10px;">
+                        <source src="audio1.mp3" type="audio/mpeg">
+                        Browser yako haiauni audio player.
+                    </audio>
+                </div>
+            </div>
+
+            <!-- Audio 2 -->
+            <div class="card">
+                <div class="card-body">
+                    <span class="card-tag">AUDIO SERMON</span>
+                    <h4 class="sermon-title">Je Dunia ni Milki ya Mungu?</h4>
+                    <p class="sermon-speaker">Bishop Josephat Gwajima</p>
+                    <audio controls style="width: 100%; margin-top: 10px;">
+                        <source src="audio2.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+
+            <!-- Audio 3 -->
+            <div class="card">
+                <div class="card-body">
+                    <span class="card-tag">AUDIO SERMON</span>
+                    <h4 class="sermon-title">Ulimwengu wa Siri Part 2</h4>
+                    <p class="sermon-speaker">Bishop Josephat Gwajima</p>
+                    <audio controls style="width: 100%; margin-top: 10px;">
+                        <source src="audio3.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: BLOG / ARTICLES (ZIMEFICHWA MWANZO) -->
+    <section id="blog" class="content-section tab-content">
+        <div class="section-header">
+            <span class="sub-title">LATEST ARTICLES</span>
+            <h2>MAKALA NA BLOG</h2>
+        </div>
+
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-body">
+                    <span class="card-tag">BLOG POST</span>
+                    <h4 class="sermon-title">Nguvu ya Maombi ya Usiku na Siri Zake</h4>
+                    <p class="sermon-speaker">Gwajimanization Media</p>
+                    <p style="color: #9ca3af; font-size: 0.85rem; margin-bottom: 15px;">
+                        Jifunze jinsi maombi ya usiku yanavyovunja vifungo na kuleta majibu ya haraka...
+                    </p>
+                    <a href="#" class="btn-outline" style="display: inline-block; padding: 8px 16px;">SOMA ZAIDI</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: GIVE & SUPPORT (HII INAONEKANA DAIMA CHINI YA HERO) -->
+    <section id="give" class="give-section">
+        <div class="give-container">
+            <span class="sub-title" style="color: #eab308;">GIVEROCITY</span>
+            <h2>GIVE & SUPPORT THE MINISTRY</h2>
+            <p>Ungana nasi katika kuenea kwa injili na kugusa maisha ya wengi.</p>
+
+            <div class="payment-grid">
+                <div class="pay-card">
+                    <h4>M-PESA</h4>
+                    <p class="pay-number">0766 405 739</p>
+                </div>
+                <div class="pay-card">
+                    <h4>TIGO PESA</h4>
+                    <p class="pay-number">0652 291 937</p>
+                </div>
+                <div class="pay-card">
+                    <h4>HALOPESA</h4>
+                    <p class="pay-number">0620 164 130</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <div class="footer-container">
+            <h3>GWAJIMANIZATION</h3>
+            <p>&copy; 2026 Gwajimanization Ministry. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT YA YOUTUBE NA SHOW/HIDE TAB FUNCTION -->
     <script>
+        // 1. YouTube Auto Fetching
         const videoIDs = [
             "TxVWgod5YVI",
             "GdffYnGaTgA",
@@ -72,167 +174,53 @@
         ];
 
         const container = document.getElementById("youtube-auto-grid");
-        
-        container.innerHTML = ""; 
+        if (container) {
+            container.innerHTML = ""; 
+            videoIDs.forEach(id => {
+                fetch(`https://noembed.com/embed?url=https://www.youtube.com/watch?v=${id}`)
+                .then(response => response.json())
+                .then(data => {
+                    const title = data.title;
+                    const author = data.author_name;
+                    const thumbnail = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
 
-        videoIDs.forEach(id => {
-            fetch(`https://noembed.com/embed?url=https://www.youtube.com/watch?v=${id}`)
-            .then(response => response.json())
-            .then(data => {
-                const title = data.title;
-                const author = data.author_name;
-                const thumbnail = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
-
-                const cardHTML = `
-                <div class="card">
-                    <div class="card-cover-box">
-                        <img src="${thumbnail}" alt="Video Cover" class="card-cover-img">
+                    const cardHTML = `
+                    <div class="card">
+                        <div class="card-cover-box">
+                            <img src="${thumbnail}" alt="Video Cover" class="card-cover-img">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-tag">VIDEO SERMON</span>
+                            <h4 class="sermon-title" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 1rem;">${title}</h4>
+                            <p class="sermon-speaker" style="margin-top: 4px;">${author}</p>
+                            <a href="https://youtu.be/${id}" target="_blank" class="yt-btn">
+                                TAZAMA YOUTUBE <i class="fas fa-play"></i>
+                            </a>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <span class="card-tag">VIDEO SERMON</span>
-                        <h4 class="sermon-title" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 1rem;">${title}</h4>
-                        <p class="sermon-speaker" style="margin-top: 4px;">${author}</p>
-                        <a href="https://youtu.be/${id}" target="_blank" class="yt-btn">
-                            TAZAMA YOUTUBE <i class="fas fa-play"></i>
-                        </a>
-                    </div>
-                </div>
-                `;
-                container.innerHTML += cardHTML;
-            })
-            .catch(error => {
-                console.log("Imeshindwa kuvuta taarifa za video: " + id);
+                    `;
+                    container.innerHTML += cardHTML;
+                })
+                .catch(error => console.log("Error loading video " + id));
             });
-        });
-    </script>
-    <!-- SECTION 2: AUDIO MESSAGES -->
-    <section id="audios" class="content-section">
-        <div class="section-header">
-            <span class="sub-title">AUDIO LIBRARY</span>
-            <h2>MASOMO YA SAUTI (AUDIO)</h2>
-        </div>
+        }
 
-        <div class="cards-grid">
+        // 2. Function ya Onyesha/Ficha Sehemu za Video/Audio/Blog
+        function showTab(tabId) {
+            const tabs = ['videos', 'audios', 'blog'];
             
-            <!-- Audio 1 -->
-            <div class="card">
-                <div class="card-img-placeholder gold">
-                    <h3>SOMO LA 01</h3>
-                </div>
-                <div class="card-body">
-                    <span class="card-tag">AUDIO SERMON</span>
-                    <h4>Sauti ya Ushindi na Ufufuo</h4>
-                    <p>Bishop Josephat Gwajima</p>
-                    <audio controls style="width: 100%; margin-top: 12px;">
-                        <source src="somokuu.mp3" type="audio/mpeg">
-                    </audio>
-                </div>
-            </div>
-
-            <!-- Audio 2 -->
-            <div class="card">
-                <div class="card-img-placeholder gold">
-                    <h3>SOMO LA 02</h3>
-                </div>
-                <div class="card-body">
-                    <span class="card-tag">AUDIO SERMON</span>
-                    <h4>Kutembea Katika Kibali</h4>
-                    <p>Bishop Josephat Gwajima</p>
-                    <audio controls style="width: 100%; margin-top: 12px;">
-                        <source src="somo2.mp3" type="audio/mpeg">
-                    </audio>
-                </div>
-            </div>
-
-            <!-- Audio 3 -->
-            <div class="card">
-                <div class="card-img-placeholder gold">
-                    <h3>SOMO LA 03</h3>
-                </div>
-                <div class="card-body">
-                    <span class="card-tag">AUDIO SERMON</span>
-                    <h4>Kuvunja Mipaka ya Umaskini</h4>
-                    <p>Bishop Josephat Gwajima</p>
-                    <audio controls style="width: 100%; margin-top: 12px;">
-                        <source src="somo3.mp3" type="audio/mpeg">
-                    </audio>
-                </div>
-            </div>
-
-            <!-- Audio 4 -->
-            <div class="card">
-                <div class="card-img-placeholder gold">
-                    <h3>SOMO LA 04</h3>
-                </div>
-                <div class="card-body">
-                    <span class="card-tag">AUDIO SERMON</span>
-                    <h4>Siri za Ulimwengu wa Roho</h4>
-                    <p>Bishop Josephat Gwajima</p>
-                    <audio controls style="width: 100%; margin-top: 12px;">
-                        <source src="somo4.mp3" type="audio/mpeg">
-                    </audio>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- GIVE SECTION -->
-    <section id="give" class="content-section give-bg">
-        <div class="section-header center">
-            <span class="sub-title">GENEROSITY</span>
-            <h2>GIVE & SUPPORT THE MINISTRY</h2>
-            <p>Ungana nasi katika kueneza injili na kugusa maisha ya wengi.</p>
-        </div>
-
-        <div class="give-grid">
-            <div class="give-card">
-                <h3>M-PESA</h3>
-                <div class="pay-number">0766 405 739</div>
-            </div>
-            <div class="give-card">
-                <h3>TIGO PESA</h3>
-                <div class="pay-number">0652 291 937</div>
-            </div>
-            <div class="give-card">
-                <h3>HALOPESA</h3>
-                <div class="pay-number">0620 164 130</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-brand">
-                <h3>GWAJIMANIZATION</h3>
-                <p>&copy; 2026 Gwajimanization Ministry. All rights reserved.</p>
-            </div>
-            <div class="footer-links">
-                <a href="https://wa.me/255766405739" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                <a href="https://www.tiktok.com/@gwajimanization_" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
-            </div>
-        </div>
-    </footer>
-    <script>
-function showTab(tabId) {
-    // 1. Ficha sehemu zote tatu mwanzo
-    const sections = ['videos', 'audios', 'blog'];
-    sections.forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.classList.remove('tab-active');
-    });
-
-    // 2. Onyesha tu sehemu iliyobonyezwa
-    const activeSection = document.getElementById(tabId);
-    if (activeSection) {
-        activeSection.classList.add('tab-active');
-        
-        // 3. Shusha ukurasa polepole mpaka kwenye hiyo sehemu
-        activeSection.scrollIntoView({ behavior: 'smooth' });
-    }
-}
-</script>
-
+            tabs.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    if (id === tabId) {
+                        el.classList.add('active-tab');
+                        el.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                        el.classList.remove('active-tab');
+                    }
+                }
+            });
+        }
+    </script>
 </body>
 </html>
