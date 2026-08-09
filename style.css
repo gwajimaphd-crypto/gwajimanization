@@ -1,764 +1,715 @@
-/* ==========================================
-   RESET NA BASE STYLES
-   ========================================== */
+/* ==========================================================================
+   GWAJIMANIZATION - LUXURY MEDIA STYLESHEET (2026)
+   ========================================================================== */
+
+:root {
+    --bg-dark: #07090e;
+    --bg-card: #11151e;
+    --bg-card-hover: #171d2a;
+    --gold-primary: #f59e0b;
+    --gold-hover: #d97706;
+    --text-main: #ffffff;
+    --text-muted: #9ca3af;
+    --red-live: #ef4444;
+    --green-active: #22c55e;
+    --border-color: rgba(255, 255, 255, 0.08);
+    --font-heading: 'Cinzel', serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html {
     scroll-behavior: smooth;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
 body {
-    background-color: #0b0e14;
-    color: #ffffff;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: var(--font-body);
     line-height: 1.6;
     overflow-x: hidden;
 }
 
-/* ==========================================
-   HEADER & NAVIGATION
-   ========================================== */
+/* --------------------------------------------------------------------------
+   1. NAVIGATION BAR (STICKY & LUXURY)
+   -------------------------------------------------------------------------- */
 .main-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 5%;
-    background-color: #0d1117;
-    border-bottom: 1px solid #1f293d;
     position: sticky;
     top: 0;
     z-index: 1000;
+    background-color: rgba(7, 9, 14, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px 0;
+}
+
+.header-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo-box {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+    cursor: pointer;
 }
 
-.logo-icon {
-    border: 2px solid #eab308;
-    padding: 4px 8px;
-    border-radius: 4px;
-    display: inline-flex;
+.logo-icon-wrap {
+    border: 2px solid var(--gold-primary);
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.logo-icon i {
-    color: #eab308;
-    font-size: 1.1rem;
+    color: var(--gold-primary);
+    font-size: 1rem;
+    box-shadow: 0 0 10px rgba(245, 158, 11, 0.2);
 }
 
 .logo-text {
-    font-weight: 900;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    color: #eab308;
+    color: var(--gold-primary);
+    font-weight: 800;
+    font-size: 1.25rem;
+    letter-spacing: 1.5px;
+    font-family: var(--font-body);
 }
 
-.nav-links a {
-    color: #9ca3af;
+.nav-links {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.nav-item {
+    color: var(--text-muted);
     text-decoration: none;
-    margin: 0 12px;
     font-size: 0.85rem;
     font-weight: 700;
+    letter-spacing: 1px;
     transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
-.nav-links a:hover {
+.nav-item:hover {
+    color: var(--gold-primary);
+}
+
+.live-link {
     color: #ffffff;
 }
 
-.nav-btn {
-    background: #ffffff;
-    color: #000000;
+.live-pulse-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--red-live);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--red-live);
+    animation: pulse 1.5s infinite;
+}
+
+.nav-btn-gold {
+    background: linear-gradient(135deg, #f59e0b, #b45309);
+    color: #ffffff;
     border: none;
-    padding: 10px 18px;
-    font-weight: 800;
-    font-size: 0.8rem;
+    padding: 10px 20px;
     border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.85rem;
     cursor: pointer;
-    transition: background 0.3s ease;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+    transition: transform 0.2s ease;
 }
 
-.nav-btn:hover {
-    background: #e5e7eb;
+.nav-btn-gold:hover {
+    transform: translateY(-2px);
 }
 
-/* ==========================================
-   HERO SECTION
-   ========================================== */
+/* --------------------------------------------------------------------------
+   2. HERO SECTION
+   -------------------------------------------------------------------------- */
 .hero-section {
-    padding: 60px 5%;
-    background: radial-gradient(circle at top right, #1f1a08, #0b0e14 60%);
+    padding: 80px 0;
+    position: relative;
 }
 
 .hero-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
-    gap: 40px;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    align-items: center;
 }
 
-.hero-text {
-    flex: 1;
-}
-
-.badge-tag {
-    color: #eab308;
-    font-weight: 700;
+.gold-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    color: var(--gold-primary);
+    padding: 6px 16px;
+    border-radius: 30px;
     font-size: 0.8rem;
-    letter-spacing: 2px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
 }
 
 .hero-title {
-    font-size: 2.8rem;
-    font-weight: 900;
+    font-size: 3.2rem;
     line-height: 1.15;
-    margin: 15px 0;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
 }
 
-.highlight {
-    color: #eab308;
+.gold-highlight {
+    color: var(--gold-primary);
+    background: linear-gradient(to right, #f59e0b, #fbbf24);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .hero-desc {
-    color: #9ca3af;
-    font-size: 0.95rem;
-    margin-bottom: 25px;
-    max-width: 580px;
-    line-height: 1.6;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    max-width: 620px;
+    margin-bottom: 35px;
+    line-height: 1.7;
 }
 
+/* HERO BUTTONS */
 .hero-btns {
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
 }
 
-.hero-btns button {
-    cursor: pointer;
-    border: none;
-    font-family: inherit;
-    font-size: 0.85rem;
-    font-weight: 700;
-    padding: 12px 22px;
+.btn-live {
+    background-color: var(--red-live) !important;
+    color: #ffffff !important;
+    border: none !important;
+    padding: 12px 24px;
     border-radius: 6px;
+    font-weight: 800;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
     transition: all 0.3s ease;
 }
 
-.hero-btns .btn-dark {
+.btn-pulse-dot {
+    width: 8px;
+    height: 8px;
     background-color: #ffffff;
-    color: #000000;
+    border-radius: 50%;
+    animation: pulse 1.2s infinite;
 }
 
-.hero-btns .btn-dark:hover {
-    background-color: #e5e7eb;
+.btn-white {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: none !important;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.hero-btns .btn-outline {
-    background-color: transparent;
-    border: 1px solid #333333;
-    color: #ffffff;
+.btn-white:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
 }
 
-.hero-btns .btn-outline:hover {
-    border-color: #eab308;
-    color: #eab308;
+/* ACTIVE STATE FOR HERO BUTTONS -> GREEN (#22c55e) */
+.btn-white.btn-active {
+    background-color: var(--green-active) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
 }
 
-.hero-image-box {
-    flex: 1;
-    display: flex;
-    justify-content: center;
+/* HERO IMAGE CARD */
+.hero-image-wrap {
+    position: relative;
+}
+
+.hero-card-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, rgba(0,0,0,0) 70%);
+    z-index: 1;
+}
+
+.hero-image-card {
+    position: relative;
+    z-index: 2;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-card);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
 }
 
 .hero-img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    border-radius: 12px;
-    border: 1px solid #27272a;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    display: block;
+    object-fit: cover;
 }
 
-/* ==========================================
-   TAB CONTENT (FICHA MWANZO)
-   ========================================== */
+.hero-img-badge {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(7, 9, 14, 0.95), transparent);
+    padding: 20px;
+    text-align: center;
+}
+
+.hero-img-badge span {
+    color: var(--gold-primary);
+    font-weight: 800;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+/* --------------------------------------------------------------------------
+   3. SECTIONS & TAB CONTENT
+   -------------------------------------------------------------------------- */
 .tab-content {
-    display: none; /* Inaficha sehemu mwanzo */
+    display: none;
+    padding: 60px 0;
 }
 
 .tab-content.active-tab {
-    display: block !important; /* Inaonyesha tu iliyobonyezwa */
+    display: block;
     animation: fadeIn 0.4s ease-in-out;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(15px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* ==========================================
-   SECTIONS GENERAL & CARDS
-   ========================================== */
-.content-section {
-    padding: 60px 5%;
-    max-width: 1200px;
+.section-container {
+    max-width: 1280px;
     margin: 0 auto;
+    padding: 0 24px;
 }
 
 .section-header {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .sub-title {
-    color: #eab308;
-    font-size: 0.75rem;
+    color: var(--gold-primary);
     font-weight: 800;
-    letter-spacing: 1.5px;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 8px;
 }
 
 .section-header h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 800;
 }
 
+/* MEDIA CARDS GRID */
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
 }
 
-.card {
-    background-color: #12161f;
-    border: 1px solid #1f293d;
-    border-radius: 10px;
+.media-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
     overflow: hidden;
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
-.card:hover {
+.media-card:hover {
     transform: translateY(-5px);
-    border-color: #374151;
+    border-color: rgba(245, 158, 11, 0.4);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
-/* YOUTUBE COVER STYLING */
 .card-cover-box {
-    width: 100%;
+    position: relative;
     height: 180px;
     overflow: hidden;
-    background-color: #1a1d24;
 }
 
 .card-cover-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
-    transition: transform 0.3s ease;
 }
 
-.card:hover .card-cover-img {
-    transform: scale(1.05);
+.play-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold-primary);
+    font-size: 2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-.card-body {
-    padding: 16px;
+.media-card:hover .play-overlay {
+    opacity: 1;
+}
+
+.media-card-body {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .card-tag {
-    color: #eab308;
+    color: var(--gold-primary);
     font-size: 0.7rem;
-    font-weight: 700;
-}
-
-.sermon-title {
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin: 6px 0;
-    line-height: 1.3;
-}
-
-.sermon-speaker {
-    color: #9ca3af;
-    font-size: 0.8rem;
-    margin-bottom: 12px;
-}
-
-.yt-btn {
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
     display: block;
-    width: 100%;
-    text-align: center;
-    background: #ff0000;
-    color: #ffffff !important;
-    padding: 10px 0;
-    border-radius: 6px;
+}
+
+.card-title {
+    font-size: 1.1rem;
     font-weight: 700;
-    font-size: 0.8rem;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.card-speaker {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+
+.btn-yt-play, .btn-read-more {
+    margin-top: auto;
+    color: var(--gold-primary);
     text-decoration: none;
-    transition: background 0.2s ease;
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
 }
 
-.yt-btn:hover {
-    background: #cc0000;
+.custom-audio-player {
+    width: 100%;
+    margin-top: 15px;
 }
 
-/* ==========================================
-   GIVE SECTION (SADAKA)
-   ========================================== */
-.give-section {
-    padding: 60px 5%;
-    background-color: #0d1117;
-    border-top: 1px solid #1f293d;
+/* LIVE PLAYER BOX */
+.live-player-box {
+    background-color: var(--bg-card);
+    border: 1px solid var(--red-live);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(239, 68, 68, 0.15);
+}
+
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    border: none;
+}
+
+.live-player-info {
+    padding: 20px;
     text-align: center;
 }
 
-.give-container {
-    max-width: 900px;
-    margin: 0 auto;
+/* --------------------------------------------------------------------------
+   4. ABOUT SECTION
+   -------------------------------------------------------------------------- */
+.about-section {
+    padding: 80px 0;
+    background-color: rgba(17, 21, 30, 0.5);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
 }
 
-.give-container h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+.about-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 50px;
+    align-items: center;
 }
 
-.give-container p {
-    color: #9ca3af;
-    margin-bottom: 25px;
+.about-img-frame {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--gold-primary);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.about-img-frame img {
+    width: 100%;
+    display: block;
+}
+
+.about-text-side h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.about-text-side p {
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.btn-gold-action {
+    background-color: var(--gold-primary);
+    color: #000000;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: 800;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+}
+
+.btn-gold-action:hover {
+    background-color: var(--gold-hover);
+}
+
+/* --------------------------------------------------------------------------
+   5. SADAKA (DONATION) SECTION
+   -------------------------------------------------------------------------- */
+.give-section {
+    padding: 80px 0;
 }
 
 .payment-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
 }
 
-.pay-card {
-    background: #12161f;
-    border: 1px solid #1f293d;
-    padding: 20px;
-    border-radius: 8px;
-    transition: border-color 0.3s ease;
+.payment-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    transition: all 0.3s ease;
 }
 
-.pay-card:hover {
-    border-color: #eab308;
+.payment-card:hover {
+    border-color: var(--gold-primary);
+    transform: translateY(-3px);
 }
 
-.pay-card h4 {
-    color: #eab308;
-    font-size: 0.9rem;
-    margin-bottom: 5px;
+.pay-icon {
+    font-size: 2rem;
+    color: var(--gold-primary);
+    margin-bottom: 12px;
+}
+
+.pay-brand {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    display: block;
 }
 
 .pay-number {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     font-weight: 800;
+    margin: 10px 0 15px 0;
     color: #ffffff;
 }
 
-/* ==========================================
-   FOOTER NA MAWASILIANO
-   ========================================== */
-footer {
-    padding: 30px 5%;
-    background-color: #080a0e;
-    border-top: 1px solid #12161f;
+.btn-copy {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-muted);
+    border: 1px solid var(--border-color);
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.2s ease;
+}
+
+.btn-copy:hover {
+    background-color: var(--gold-primary);
+    color: #000000;
+}
+
+.account-name-banner {
+    background-color: rgba(245, 158, 11, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    margin-top: 30px;
+    color: var(--gold-primary);
+    font-size: 0.95rem;
+}
+
+/* --------------------------------------------------------------------------
+   6. FOOTER
+   -------------------------------------------------------------------------- */
+.main-footer {
+    background-color: #040508;
+    border-top: 1px solid var(--border-color);
+    padding: 60px 0 20px 0;
 }
 
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 40px;
+
 }
 
-.social-links {
-    display: flex;
-    gap: 20px;
-    align-items: center;
+.footer-desc {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: 15px;
+    max-width: 320px;
 }
 
-.social-links a {
-    font-size: 1.1rem;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: 700;
-    transition: opacity 0.3s ease;
-}
-
-.social-links a:hover {
-    opacity: 0.8;
-}
-
-.wa-link {
-    color: #25D366;
-}
-
-.tiktok-link {
+.footer-col h4 {
     color: #ffffff;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
 }
 
-/* ==========================================
-   RESPONSIVE DESIGN (SIMU NA TABLET)
-   ========================================== */
-@media (max-width: 768px) {
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-desc {
-        margin: 0 auto 25px auto;
-    }
-
-    .hero-btns {
-        justify-content: center;
-    }
-
-    .nav-links {
-        display: none; /* Inaficha menu kwenye simu ili kupunguza msongamano */
-    }
-
-    .hero-title {
-        font-size: 2.1rem;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
+.footer-col ul {
+    list-style: none;
 }
-<!DOCTYPE html>
-<html lang="sw">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GWAJIMANIZATION - Welcome Home</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body id="home-top">
 
-    <!-- HEADER / NAVIGATION -->
-    <header class="main-header">
-        <div class="logo-box" onclick="goHome()" style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
-            <div style="display: flex; align-items: center; gap: 8px;">
-                <div style="border: 2px solid #eab308; padding: 4px 8px; border-radius: 4px; display: inline-flex; align-items: center; justify-content: center;">
-                    <i class="fas fa-cross" style="color: #eab308; font-size: 1.1rem;"></i>
-                </div>
-                <span class="logo-text" style="color: #eab308; font-weight: 900; letter-spacing: 1px;">GWAJIMANIZATION</span>
-            </div>
-        </div>
+.footer-col ul li {
+    margin-bottom: 10px;
+}
 
-        <nav class="nav-links">
-            <a href="javascript:void(0)" onclick="goHome()">ABOUT</a>
-            <a href="#live" onclick="showTab('live')"><span style="color: #ef4444;">🔴</span> MUBASHARA</a>
-            <a href="#videos" onclick="showTab('videos')">VIDEO</a>
-            <a href="#audios" onclick="showTab('audios')">AUDIO</a>
-            <a href="#blog" onclick="showTab('blog')">BLOGU</a>
-            <a href="#give">SADAKA</a>
-            <a href="#contact">MAWASILIANO</a>
-        </nav>
-        <div class="nav-right">
-            <button onclick="showTab('videos')" class="nav-btn">MASOMO MAPYA</button>
-        </div>
-    </header>
+.footer-col ul li a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.2s;
+}
 
-    <!-- HERO SECTION (HOME) -->
-    <section class="hero-section">
-        <div class="hero-container">
-            <div class="hero-text">
-                <span class="badge-tag">GWAJIMANIZATION</span>
-                <h1 class="hero-title">SISI SIO KANISA TU,<br><span class="highlight">SISI NI FAMILIA</span></h1>
-                
-                <p class="hero-desc">
-                    Dkt. Josephat Gwajima ni Mchungaji Mkuu wa mojawapo ya makanisa makubwa zaidi Afrika Mashariki. Pia ni Askofu Mkuu na mwanzilishi wa Ufufuo na Uzima Ministries.<br>
-                    Mungu amekuwa akimtumia katika huduma ya kufufua wafu, kuponya wagonjwa, na kutenda ishara na maajabu kwa jina la Yesu Kristo.
-                </p>
+.footer-col ul li a:hover {
+    color: var(--gold-primary);
+}
 
-                <!-- VIFUNGO VYA HERO SECTION -->
-                <div class="hero-btns">
-                    <button onclick="showTab('live', this)" class="btn-live">
-                        <i class="fas fa-broadcast-tower"></i> MUBASHARA (LIVE)
-                    </button>
-                    <button onclick="showTab('videos', this)" class="btn-white">TAZAMA VIDEO</button>
-                    <button onclick="showTab('audios', this)" class="btn-white">SIKILIZA AUDIO</button>
-                    <button onclick="showTab('blog', this)" class="btn-white">SOMA BLOGU</button>
-                </div>
-            </div>
+.social-links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
-            <div class="hero-image-box">
-                <img src="askofu.jpg" alt="Askofu Josephat Gwajima" class="hero-img">
-            </div>
-        </div>
-    </section>
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 10px 16px;
+    border-radius: 6px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+}
 
-    <!-- SECTION 0: MUBASHARA (LIVE STREAMING) -->
-    <section id="live" class="content-section tab-content">
-        <div class="section-header">
-            <span class="sub-title" style="color: #ef4444;"><i class="fas fa-circle" style="font-size: 0.6rem; vertical-align: middle;"></i> LIVE STREAMING</span>
-            <h2>MAHUBIRI MUBASHARA (LIVE)</h2>
-        </div>
+.social-btn.whatsapp { color: #25D366; }
+.social-btn.tiktok { color: #ffffff; }
 
-        <div style="background-color: #12161f; border: 1px solid #ef4444; border-radius: 12px; padding: 20px; max-width: 900px; margin: 0 auto; text-align: center;">
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;">
-                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
-                    src="https://www.youtube.com/embed/live_stream?channel=YOUR_CHANNEL_ID" 
-                    title="Gwajimanization Live Stream" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-            </div>
-            <h3 style="margin-top: 15px; color: #ffffff;">Ibada na Mahubiri Mubashara</h3>
-            <p style="color: #9ca3af; font-size: 0.9rem;">Ungana nasi moja kwa moja kutoka Kanisa la Ufufuo na Uzima.</p>
-        </div>
+.footer-bottom {
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    padding-top: 25px;
+    margin-top: 40px;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
 
-        <div style="text-align: center; margin-top: 35px;">
-            <button onclick="goHome()" class="btn-outline" style="border: 1px solid #eab308; color: #eab308; padding: 10px 24px; border-radius: 6px; font-weight: 700; cursor: pointer;">
-                <i class="fas fa-arrow-up"></i> RUDI JUU / HOME
-            </button>
-        </div>
-    </section>
+.btn-back-home {
+    background-color: transparent;
+    border: 1px solid var(--gold-primary);
+    color: var(--gold-primary);
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+}
 
-    <!-- SECTION 1: VIDEO MESSAGES -->
-    <section id="videos" class="content-section tab-content">
-        <div class="section-header">
-            <span class="sub-title">YOUTUBE MEDIA</span>
-            <h2>MASOMO YA VIDEO</h2>
-        </div>
+.btn-back-home:hover {
+    background-color: var(--gold-primary);
+    color: #000000;
+}
 
-        <div class="cards-grid" id="youtube-auto-grid">
-            <p style="color: #9ca3af; text-align: center; width: 100%;">Inaleta video kutoka YouTube...</p>
-        </div>
+.scroll-top-wrap {
+    text-align: center;
+    margin-top: 35px;
+}
 
-        <div style="text-align: center; margin-top: 35px;">
-            <button onclick="goHome()" class="btn-outline" style="border: 1px solid #eab308; color: #eab308; padding: 10px 24px; border-radius: 6px; font-weight: 700; cursor: pointer;">
-                <i class="fas fa-arrow-up"></i> RUDI JUU / HOME
-            </button>
-        </div>
-    </section>
+/* ANIMATIONS */
+@keyframes pulse {
+    0% { transform: scale(0.95); opacity: 0.8; }
+    50% { transform: scale(1.15); opacity: 1; }
+    100% { transform: scale(0.95); opacity: 0.8; }
+}
 
-    <!-- SECTION 2: AUDIO MESSAGES -->
-    <section id="audios" class="content-section tab-content">
-        <div class="section-header">
-            <span class="sub-title">MAKTABA YA SAUTI</span>
-            <h2>MASOMO YA SAUTI (AUDIO)</h2>
-        </div>
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
-        <div class="cards-grid">
-            <div class="card">
-                <div class="card-body">
-                    <span class="card-tag">SOMO LA SAUTI</span>
-                    <h4 class="sermon-title">Kipaji Cha Asili na Tabia Yako</h4>
-                    <p class="sermon-speaker">Askofu Josephat Gwajima</p>
-                    <audio controls style="width: 100%; margin-top: 10px;">
-                        <source src="audio1.mp3" type="audio/mpeg">
-                    </audio>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body">
-                    <span class="card-tag">SOMO LA SAUTI</span>
-                    <h4 class="sermon-title">Je Dunia ni Milki ya Mungu?</h4>
-                    <p class="sermon-speaker">Askofu Josephat Gwajima</p>
-                    <audio controls style="width: 100%; margin-top: 10px;">
-                        <source src="audio2.mp3" type="audio/mpeg">
-                    </audio>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body">
-                    <span class="card-tag">SOMO LA SAUTI</span>
-                    <h4 class="sermon-title">Ulimwengu wa Siri Part 2</h4>
-                    <p class="sermon-speaker">Askofu Josephat Gwajima</p>
-                    <audio controls style="width: 100%; margin-top: 10px;">
-                        <source src="audio3.mp3" type="audio/mpeg">
-                    </audio>
-                </div>
-            </div>
-        </div>
-
-        <div style="text-align: center; margin-top: 35px;">
-            <button onclick="goHome()" class="btn-outline" style="border: 1px solid #eab308; color: #eab308; padding: 10px 24px; border-radius: 6px; font-weight: 700; cursor: pointer;">
-                <i class="fas fa-arrow-up"></i> RUDI JUU / HOME
-            </button>
-        </div>
-    </section>
-
-    <!-- SECTION 3: BLOG / ARTICLES -->
-    <section id="blog" class="content-section tab-content">
-        <div class="section-header">
-            <span class="sub-title">MAKALA MPYA</span>
-            <h2>MAKALA NA BLOGU</h2>
-        </div>
-
-        <div class="cards-grid">
-            <div class="card">
-                <div class="card-body">
-                    <span class="card-tag">MAKALA</span>
-                    <h4 class="sermon-title">Nguvu ya Maombi ya Usiku na Siri Zake</h4>
-                    <p class="sermon-speaker">Gwajimanization Media</p>
-                    <p style="color: #9ca3af; font-size: 0.85rem; margin-bottom: 15px;">
-                        Jifunze jinsi maombi ya usiku yanavyovunja vifungo na kuleta majibu ya haraka...
-                    </p>
-                    <a href="#" class="btn-outline" style="display: inline-block; padding: 8px 16px;">SOMA ZAIDI</a>
-                </div>
-            </div>
-        </div>
-
-        <div style="text-align: center; margin-top: 35px;">
-            <button onclick="goHome()" class="btn-outline" style="border: 1px solid #eab308; color: #eab308; padding: 10px 24px; border-radius: 6px; font-weight: 700; cursor: pointer;">
-                <i class="fas fa-arrow-up"></i> RUDI JUU / HOME
-            </button>
-        </div>
-    </section>
-
-    <!-- SECTION 4: GIVE & SUPPORT (SADAKA) -->
-    <section id="give" class="give-section">
-        <div class="give-container">
-            <span class="sub-title" style="color: #eab308;">SADAKA</span>
-            <h2>KUTUMA SADAKA</h2>
-            <p>Jinsi ya kusapoti huduma ya Askofu Josephat Gwajima</p>
-
-            <div class="payment-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px;">
-                <div class="pay-card">
-                    <h4>M-PESA</h4>
-                    <p class="pay-number">+255 763 432 025</p>
-                </div>
-                <div class="pay-card">
-                    <h4>MIXX BY YAS</h4>
-                    <p class="pay-number">+255 654 808 036</p>
-                </div>
-                <div class="pay-card">
-                    <h4>AIRTEL</h4>
-                    <p class="pay-number">+255 787 485 811</p>
-                </div>
-                <div class="pay-card">
-                    <h4>NMB BANK</h4>
-                    <p class="pay-number" style="font-size: 1rem;">Acc: 53110014667</p>
-                </div>
-            </div>
-
-            <p style="margin-top: 20px; color: #eab308; font-weight: 700; font-size: 0.95rem;">
-                Jina litakaloonekana wakati wa kutuma: Josephat Gwajima
-            </p>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer id="contact" style="padding: 30px 5%; background-color: #080a0e; border-top: 1px solid #12161f;">
-        <div class="footer-container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; max-width: 1200px; margin: 0 auto;">
-            <div>
-                <h3 style="color: #ffffff; margin-bottom: 5px;">GWAJIMANIZATION</h3>
-                <p style="color: #6b7280; font-size: 0.85rem;">&copy; 2026 Gwajimanization Ministry. All rights reserved.</p>
-            </div>
-
-            <div class="social-links" style="display: flex; gap: 15px; align-items: center;">
-                <a href="https://wa.me/255763432025" target="_blank" style="color: #25D366; font-size: 1.2rem; text-decoration: none; display: flex; align-items: center; gap: 6px; font-weight: 600;">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
-                </a>
-                <a href="https://www.tiktok.com/@gwajimanization" target="_blank" style="color: #ffffff; font-size: 1.2rem; text-decoration: none; display: flex; align-items: center; gap: 6px; font-weight: 600;">
-                    <i class="fab fa-tiktok"></i> TikTok
-                </a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- SCRIPT ZA YOUTUBE, SHOW/HIDE TAB NA KURUDI HOME -->
-    <script>
-        const videoIDs = [
-            "TxVWgod5YVI",
-            "GdffYnGaTgA",
-            "a2-h33_oTmY",
-            "anJjdTOM16g"
-        ];
-
-        const container = document.getElementById("youtube-auto-grid");
-        if (container) {
-            container.innerHTML = ""; 
-            videoIDs.forEach(id => {
-                fetch(`https://noembed.com/embed?url=https://www.youtube.com/watch?v=${id}`)
-                .then(response => response.json())
-                .then(data => {
-                    const title = data.title;
-                    const author = data.author_name;
-                    const thumbnail = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
-
-                    const cardHTML = `
-                    <div class="card">
-                        <div class="card-cover-box">
-                            <img src="${thumbnail}" alt="Video Cover" class="card-cover-img">
-                        </div>
-                        <div class="card-body">
-                            <span class="card-tag">SOMO LA VIDEO</span>
-                            <h4 class="sermon-title" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 1rem;">${title}</h4>
-                            <p class="sermon-speaker" style="margin-top: 4px;">${author}</p>
-                            <a href="https://youtu.be/${id}" target="_blank" class="yt-btn">
-                                TAZAMA YOUTUBE <i class="fas fa-play"></i>
-                            </a>
-                        </div>
-                    </div>
-                    `;
-                    container.innerHTML += cardHTML;
-                })
-                .catch(error => console.log("Error loading video " + id));
-            });
-        }
-
-        function showTab(tabId, btnElement) {
-            const tabs = ['live', 'videos', 'audios', 'blog'];
-            
-            tabs.forEach(id => {
-                const el = document.getElementById(id);
-                if (el) {
-                    if (id === tabId) {
-                        el.classList.add('active-tab');
-                        el.scrollIntoView({ behavior: 'smooth' });
-                    } else {
-                        el.classList.remove('active-tab');
-                    }
-                }
-            });
-
-            if (btnElement && !btnElement.classList.contains('btn-live')) {
-                const whiteBtns = document.querySelectorAll('.hero-btns .btn-white');
-                whiteBtns.forEach(btn => btn.classList.remove('btn-active'));
-                btnElement.classList.add('btn-active');
-            }
-        }
-
-        function goHome() {
-            const tabs = ['live', 'videos', 'audios', 'blog'];
-            tabs.forEach(id => {
-                const el = document.getElementById(id);
-                if (el) {
-                    el.classList.remove('active-tab');
-                }
-            });
-
-            const whiteBtns = document.querySelectorAll('.hero-btns .btn-white');
-            whiteBtns.forEach(btn => btn.classList.remove('btn-active'));
-
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    </script>
-</body>
-</html>
+/* RESPONSIVE DESIGN (MOBILE & TABLET) */
+@media (max-width: 992px) {
+    .hero-container { grid-template-columns: 1fr; text-align: center; }
+    .hero-title { font-size: 2.5rem; }
+    .hero-desc { margin: 0 auto 30px auto; }
+    .hero-btns { justify-content: center; }
+    .about-grid { grid-template-columns: 1fr; }
+    .footer-container { grid-template-columns: 1fr; gap: 30px; }
+    .nav-links { display: none; } /* Simplified for mobile */
+}
