@@ -730,33 +730,33 @@
                 <!-- M-PESA -->
                 <div class="glass-card">
                     <h3 style="color:var(--gold-primary); margin-bottom: 5px;">M-PESA</h3>
-                    <p style="font-size:1.3rem; font-weight:bold; margin-bottom: 5px;">0754 000 000</p>
+                    <p style="font-size:1.3rem; font-weight:bold; margin-bottom: 5px;">+255 763 432 025</p>
                     <p class="card-speaker">Jina: Ufufuo na Uzima</p>
-                    <button class="btn-copy" data-copy="0754000000">Copy Namba</button>
+                    <button class="btn-copy" data-copy="+255763432025">Copy Namba</button>
                 </div>
 
                 <!-- AIRTEL MONEY -->
                 <div class="glass-card">
                     <h3 style="color:var(--gold-primary); margin-bottom: 5px;">AIRTEL MONEY</h3>
-                    <p style="font-size:1.3rem; font-weight:bold; margin-bottom: 5px;">0784 000 000</p>
+                    <p style="font-size:1.3rem; font-weight:bold; margin-bottom: 5px;">+255 787 485 811</p>
                     <p class="card-speaker">Jina: Ufufuo na Uzima</p>
-                    <button class="btn-copy" data-copy="0784000000">Copy Namba</button>
+                    <button class="btn-copy" data-copy="+255787485811">Copy Namba</button>
                 </div>
 
                 <!-- MIXX BY YAS -->
                 <div class="glass-card">
                     <h3 style="color:var(--gold-primary); margin-bottom: 5px;">MIXX BY YAS</h3>
-                    <p style="font-size:1.3rem; font-weight:bold; margin-bottom: 5px;">0655 000 000</p>
+                    <p style="font-size:1.3rem; font-weight:bold; margin-bottom: 5px;">+255 654 808 036</p>
                     <p class="card-speaker">Jina: Ufufuo na Uzima</p>
-                    <button class="btn-copy" data-copy="0655000000">Copy Namba</button>
+                    <button class="btn-copy" data-copy="+255654808036">Copy Namba</button>
                 </div>
 
                 <!-- NMB BANK -->
                 <div class="glass-card">
                     <h3 style="color:var(--gold-primary); margin-bottom: 5px;">NMB BANK</h3>
-                    <p style="font-size:1.3rem; font-weight:bold; margin-bottom: 5px;">2011 0000 0000</p>
+                    <p style="font-size:1.3rem; font-weight:bold; margin-bottom: 5px;">53110014667</p>
                     <p class="card-speaker">Akaunti: Gwajima Ministry</p>
-                    <button class="btn-copy" data-copy="201100000000">Copy Akaunti</button>
+                    <button class="btn-copy" data-copy="53110014667">Copy Akaunti</button>
                 </div>
             </div>
         </section>
@@ -857,7 +857,11 @@
                     btn.style.background = '#22c55e';
                     btn.style.color = '#fff';
                     setTimeout(() => {
-                        btn.innerText = 'Copy Namba';
+                        if (btn.hasAttribute('data-copy') && btn.getAttribute('data-copy').includes('53110014667')) {
+                           btn.innerText = 'Copy Akaunti';
+                        } else {
+                           btn.innerText = 'Copy Namba';
+                        }
                         btn.style.background = '';
                         btn.style.color = '';
                     }, 2000);
