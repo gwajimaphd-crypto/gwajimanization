@@ -380,3 +380,40 @@ body {
     font-size: 0.8rem;
     margin-bottom: 12px;
 }
+/* Inafanya ukurasa ushuke kwa taratibu (smooth scroll) */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Mpangilio wa Vifungo vya Juu */
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 24px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 1px solid #333;
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background-color: #ff0000;
+    border-color: #ff0000;
+}
