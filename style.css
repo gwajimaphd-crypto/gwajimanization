@@ -1,53 +1,53 @@
+/* ==========================================
+   RESET NA BASE STYLES
+   ========================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
 body {
-    background-color: #0b0c10;
+    background-color: #0b0e14;
     color: #ffffff;
-    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
     overflow-x: hidden;
 }
 
-/* NAVBAR */
-.top-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #000000;
-    border-bottom: 1px solid #1f242d;
-    z-index: 1000;
-    padding: 1rem 2rem;
-}
-
-.nav-wrapper {
-    max-width: 1250px;
-    margin: 0 auto;
+/* ==========================================
+   HEADER & NAVIGATION
+   ========================================== */
+.main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 5%;
+    background-color: #0d1117;
+    border-bottom: 1px solid #1f293d;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.site-logo {
-    height: 38px;
-    width: auto;
-}
-
-.nav-links {
-    display: flex;
-    gap: 2rem;
+.logo-text {
+    font-weight: 900;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: #ffffff;
 }
 
 .nav-links a {
-    color: #a0aec0;
+    color: #9ca3af;
     text-decoration: none;
+    margin: 0 15px;
     font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    transition: 0.3s;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
@@ -57,30 +57,34 @@ body {
 .nav-btn {
     background: #ffffff;
     color: #000000;
-    padding: 0.5rem 1.2rem;
-    font-weight: 800;
+    border: none;
+    padding: 8px 16px;
+    font-weight: 700;
     font-size: 0.75rem;
-    text-decoration: none;
     border-radius: 4px;
-    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
-/* HERO SECTION */
+.nav-btn:hover {
+    background: #e5e7eb;
+}
+
+/* ==========================================
+   HERO SECTION
+   ========================================== */
 .hero-section {
-    padding-top: 130px;
-    padding-bottom: 80px;
-    background: #0b0c10;
-    max-width: 1250px;
-    margin: 0 auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 60px 5%;
+    background: radial-gradient(circle at top right, #1f1a08, #0b0e14 60%);
 }
 
 .hero-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
 }
 
 .hero-text {
@@ -88,342 +92,43 @@ body {
 }
 
 .badge-tag {
-    background: #1f293d;
-    color: #60a5fa;
-    font-size: 0.75rem;
-    font-weight: 800;
-    padding: 0.3rem 0.8rem;
-    border-radius: 30px;
+    color: #eab308;
+    font-weight: 700;
+    font-size: 0.8rem;
     letter-spacing: 2px;
 }
 
 .hero-title {
-    font-family: 'Syne', sans-serif;
-    font-size: 3.2rem;
-    font-weight: 800;
+    font-size: 2.8rem;
+    font-weight: 900;
     line-height: 1.1;
-    margin: 1.2rem 0;
-    color: #ffffff;
+    margin: 15px 0;
 }
 
 .highlight {
-    color: #d4af37;
+    color: #eab308;
 }
 
 .hero-desc {
     color: #9ca3af;
-    font-size: 1.05rem;
-    margin-bottom: 2rem;
+    font-size: 1rem;
+    margin-bottom: 25px;
     max-width: 500px;
 }
 
 .hero-btns {
     display: flex;
-    gap: 1rem;
-}
-
-.btn-dark {
-    background: #ffffff;
-    color: #000000;
-    padding: 0.9rem 1.8rem;
-    font-weight: 700;
-    text-decoration: none;
-    border-radius: 6px;
-    font-size: 0.85rem;
-}
-
-.btn-outline {
-    border: 1px solid #374151;
-    color: #ffffff;
-    padding: 0.9rem 1.8rem;
-    font-weight: 700;
-    text-decoration: none;
-    border-radius: 6px;
-    font-size: 0.85rem;
-}
-
-.hero-image-box {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.hero-img {
-    width: 100%;
-    max-width: 580px;
-    height: auto;
-    border-radius: 12px;
-    border: 1px solid #2d3748;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    object-fit: contain;
-}
-
-/* CARDS GRID & VIDEO/AUDIO */
-.content-section {
-    padding: 5rem 2rem;
-    max-width: 1250px;
-    margin: 0 auto;
-}
-
-.section-header {
-    margin-bottom: 2.5rem;
-}
-
-.section-header.center {
-    text-align: center;
-}
-
-.sub-title {
-    color: #d4af37;
-    font-size: 0.8rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
-
-.section-header h2 {
-    font-family: 'Syne', sans-serif;
-    font-size: 2.2rem;
-    margin-top: 0.3rem;
-}
-
-.cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.card {
-    background: #111318;
-    border-radius: 10px;
-    overflow: hidden;
-    border: 1px solid #1f242d;
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.video-container {
-    width: 100%;
-    background: #000;
-}
-
-.video-container iframe {
-    display: block;
-}
-
-.card-img-placeholder {
-    height: 210px;
-    background: linear-gradient(135deg, #1e293b, #0f172a);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    text-align: center;
-}
-
-.card-img-placeholder.dark {
-    background: linear-gradient(135deg, #311010, #110505);
-}
-
-.card-img-placeholder.gold {
-    background: linear-gradient(135deg, #3a2e10, #120e03);
-}
-
-.card-img-placeholder h3 {
-    font-family: 'Syne', sans-serif;
-    font-size: 1.2rem;
-    color: #e2e8f0;
-}
-
-.card-body {
-    padding: 1.5rem;
-}
-
-.card-tag {
-    font-size: 0.7rem;
-    font-weight: 800;
-    color: #d4af37;
-    letter-spacing: 1px;
-}
-
-.card-body h4 {
-    font-size: 1.1rem;
-    margin: 0.4rem 0;
-}
-
-.card-body p {
-    color: #6b7280;
-    font-size: 0.85rem;
-}
-
-/* GIVE SECTION */
-.give-bg {
-    background: #07080a;
-    border-radius: 16px;
-    border: 1px solid #1a1d24;
-}
-
-.give-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.give-card {
-    background: #111318;
-    padding: 2rem;
-    border-radius: 10px;
-    text-align: center;
-    border: 1px solid #1f242d;
-}
-
-.give-card h3 {
-    color: #9ca3af;
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-}
-
-.pay-number {
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: #d4af37;
-}
-
-/* FOOTER */
-.footer {
-    border-top: 1px solid #1a1d24;
-    padding: 3rem 2rem;
-}
-
-.footer-container {
-    max-width: 1250px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-brand h3 {
-    font-family: 'Syne', sans-serif;
-    font-size: 1.1rem;
-}
-
-.footer-brand p {
-    color: #4b5563;
-    font-size: 0.8rem;
-    margin-top: 0.3rem;
-}
-
-.footer-links a {
-    color: #d4af37;
-    text-decoration: none;
-    margin-left: 1.5rem;
-    font-size: 0.9rem;
-    font-weight: 600;
-}
-
-/* MOBILE RESPONSIVE */
-@media (max-width: 850px) {
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    .hero-title {
-        font-size: 2.2rem;
-    }
-    .hero-btns {
-        justify-content: center;
-    }
-    .nav-links {
-        display: none;
-    }
-    .footer-container {
-        flex-direction: column;
-        gap: 1.5rem;
-        text-align: center;
-    }
-}
-/* MAREKEBISHO YA KAVA ZA YOUTUBE */
-.card-cover-box {
-    width: 100%;
-    height: 180px; /* Ukubwa uliopunguzwa ili kadi zifiti vizuri */
-    overflow: hidden;
-    background-color: #1a1d24;
-    position: relative;
-}
-
-.card-cover-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Inafanya picha ijipange vizuri bila kujivuta */
-    object-position: center;
-    transition: transform 0.3s ease;
-}
-
-.card:hover .card-cover-img {
-    transform: scale(1.05);
-}
-
-.sermon-title {
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin: 8px 0 4px 0;
-    line-height: 1.3;
-}
-
-.sermon-speaker {
-    color: #9ca3af;
-    font-size: 0.8rem;
-    margin-bottom: 12px;
-}
-/* Inafanya ukurasa ushuke kwa taratibu (smooth scroll) */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Mpangilio wa Vifungo vya Juu */
-.hero-buttons {
-    display: flex;
     gap: 12px;
-    margin-top: 20px;
     flex-wrap: wrap;
 }
 
-.btn {
-    padding: 12px 24px;
-    font-weight: 700;
-    text-decoration: none;
-    border-radius: 6px;
-    font-size: 0.85rem;
-    transition: all 0.3s ease;
-}
-
-.btn-primary {
-    background-color: #ffffff;
-    color: #000000;
-}
-
-.btn-secondary {
-    background-color: transparent;
-    border: 1px solid #333;
-    color: #ffffff;
-}
-
-.btn-secondary:hover {
-    background-color: #ff0000;
-    border-color: #ff0000;
-}
 .hero-btns button {
     cursor: pointer;
     border: none;
     font-family: inherit;
     font-size: 0.85rem;
     font-weight: 700;
-    padding: 12px 20px;
+    padding: 12px 22px;
     border-radius: 6px;
     transition: all 0.3s ease;
 }
@@ -431,6 +136,10 @@ html {
 .hero-btns .btn-dark {
     background-color: #ffffff;
     color: #000000;
+}
+
+.hero-btns .btn-dark:hover {
+    background-color: #e5e7eb;
 }
 
 .hero-btns .btn-outline {
@@ -442,4 +151,229 @@ html {
 .hero-btns .btn-outline:hover {
     border-color: #ff0000;
     color: #ff0000;
+}
+
+.hero-image-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid #27272a;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================================
+   TAB CONTENT (FICHA MWANZO)
+   ========================================== */
+.tab-content {
+    display: none; /* Inaficha sehemu mwanzo */
+}
+
+.tab-content.active-tab {
+    display: block !important; /* Inaonyesha tu iliyobonyezwa */
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================
+   SECTIONS GENERAL & CARDS
+   ========================================== */
+.content-section {
+    padding: 60px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    margin-bottom: 30px;
+}
+
+.sub-title {
+    color: #ff0000;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.section-header h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #12161f;
+    border: 1px solid #1f293d;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #374151;
+}
+
+/* YOUTUBE COVER STYLING */
+.card-cover-box {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    background-color: #1a1d24;
+}
+
+.card-cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-cover-img {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 16px;
+}
+
+.card-tag {
+    color: #eab308;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.sermon-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 6px 0;
+    line-height: 1.3;
+}
+
+.sermon-speaker {
+    color: #9ca3af;
+    font-size: 0.8rem;
+    margin-bottom: 12px;
+}
+
+.yt-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: #ff0000;
+    color: #ffffff !important;
+    padding: 10px 0;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.yt-btn:hover {
+    background: #cc0000;
+}
+
+/* ==========================================
+   GIVE SECTION
+   ========================================== */
+.give-section {
+    padding: 60px 5%;
+    background-color: #0d1117;
+    border-top: 1px solid #1f293d;
+    text-align: center;
+}
+
+.give-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.give-container h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.give-container p {
+    color: #9ca3af;
+    margin-bottom: 30px;
+}
+
+.payment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.pay-card {
+    background: #12161f;
+    border: 1px solid #1f293d;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.pay-card h4 {
+    color: #eab308;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.pay-number {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+footer {
+    padding: 30px 5%;
+    text-align: center;
+    background-color: #080a0e;
+    border-top: 1px solid #12161f;
+    color: #6b7280;
+    font-size: 0.85rem;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN (SIMU NA TABLET)
+   ========================================== */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-desc {
+        margin: 0 auto 25px auto;
+    }
+
+    .hero-btns {
+        justify-content: center;
+    }
+
+    .nav-links {
+        display: none; /* Inaficha menu za kawaida kwenye simu */
+    }
+
+    .hero-title {
+        font-size: 2.1rem;
+    }
 }
