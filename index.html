@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GWAJIMANIZATION — Next-Gen Ministry & Media Platform</title>
+    <title>GWAJIMANIZATION TEAM — Next-Gen Platform</title>
     
     <!-- Modern Typography: Plus Jakarta Sans & Cinzel Decorative -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- FontAwesome 6 Pro/Free Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -17,7 +17,7 @@
 </head>
 <body id="home-top">
 
-    <!-- FUTURISTIC GLASS HEADER -->
+    <!-- FUTURISTIC GLASS NAVBAR -->
     <header class="main-header" id="navbar">
         <div class="header-container">
             <div class="logo-box" onclick="goHome()">
@@ -27,7 +27,7 @@
                 </div>
                 <div class="logo-text-wrap">
                     <span class="logo-text">GWAJIMANIZATION</span>
-                    <span class="logo-subtext">MEDIA & MINISTRY</span>
+                    <span class="logo-subtext">GWAJIMANIZATION TEAM</span>
                 </div>
             </div>
 
@@ -66,15 +66,15 @@
         </div>
     </header>
 
-    <!-- CINEMATIC HERO SECTION -->
+    <!-- CINEMATIC ULTRA-HERO SECTION -->
     <section class="hero-section">
-        <div class="hero-bg-overlay"></div>
         <div class="hero-ambient-glow"></div>
+        <div class="hero-particles" id="particles"></div>
         
         <div class="hero-container">
             <div class="hero-text" data-scroll-reveal>
                 <div class="gold-badge">
-                    <span class="badge-dot"></span> OFFICIAL MINISTRY & MEDIA PLATFORM
+                    <span class="badge-dot"></span> GWAJIMANIZATION TEAM
                 </div>
                 
                 <h1 class="hero-title">
@@ -90,7 +90,7 @@
                 <!-- HERO BUTTONS -->
                 <div class="hero-btns">
                     <button onclick="showTab('live', this)" class="btn-live glow-effect">
-                        <span class="btn-pulse-dot"></span> WATCH LIVE
+                        <span class="btn-pulse-dot"></span> WATCH LIVE <i class="fas fa-arrow-right icon-slide"></i>
                     </button>
                     <button onclick="showTab('videos', this)" class="btn-glass">WATCH VIDEOS</button>
                     <button onclick="showTab('audios', this)" class="btn-glass">LISTEN AUDIO</button>
@@ -99,7 +99,7 @@
             </div>
 
             <div class="hero-image-wrap" data-scroll-reveal>
-                <div class="hero-card-glow"></div>
+                <div class="hero-visual-glow"></div>
                 <div class="hero-image-card">
                     <img src="askofu.jpg" alt="Askofu Dr. Josephat Gwajima" class="hero-img">
                     <div class="hero-img-badge glass-card">
@@ -114,23 +114,23 @@
         </div>
     </section>
 
-    <!-- SEARCH & DISCOVERY BAR -->
+    <!-- PREMIUM INTEGRATED SEARCH BAR -->
     <div class="search-section">
         <div class="search-container glass-card">
-            <i class="fas fa-search search-icon"></i>
+            <i class="fas fa-magnifying-glass search-icon"></i>
             <input type="text" id="sermonSearch" placeholder="Search sermons, teachings, videos, audio..." onkeyup="filterContent()">
             <button class="search-btn"><i class="fas fa-sliders"></i> Filter</button>
         </div>
     </div>
 
-    <!-- ABOUT SECTION (Visible on Home) -->
+    <!-- FEATURED EDITORIAL ABOUT SECTION -->
     <section id="about" class="about-section">
         <div class="section-container">
-            <div class="about-grid">
+            <div class="about-grid glass-card featured-editorial">
                 <div class="about-image-side" data-scroll-reveal>
-                    <div class="about-img-frame glass-card">
+                    <div class="about-img-frame">
                         <img src="askofu.jpg" alt="Kuhusu Gwajimanization">
-                        <div class="frame-border-glow"></div>
+                        <div class="frame-overlay-gradient"></div>
                     </div>
                 </div>
                 <div class="about-text-side" data-scroll-reveal>
@@ -143,7 +143,7 @@
                         Mungu amekuwa akimtumia katika huduma ya kufufua wafu, kuponya wagonjwa, na kutenda ishara na maajabu kwa jina la Yesu Kristo.
                     </p>
                     <button onclick="showTab('videos')" class="btn-gold-action">
-                        TAZAMA SHUHUDA <i class="fas fa-arrow-right"></i>
+                        TAZAMA SHUHUDA <i class="fas fa-arrow-right icon-slide"></i>
                     </button>
                 </div>
             </div>
@@ -154,15 +154,15 @@
     <section id="live" class="content-section tab-content">
         <div class="section-container">
             <div class="section-header text-center">
-                <span class="sub-title live-subtitle"><span class="pulse-red"></span> NEXT-GEN LIVE EXPERIENCE</span>
+                <span class="sub-title live-subtitle"><span class="pulse-red"></span> CINEMATIC LIVE EXPERIENCE</span>
                 <h2>MAHUBIRI MUBASHARA (LIVE)</h2>
                 <p class="section-desc">Ungana na Maelfu ya Waumini Duniani Kote Moja kwa Moja</p>
             </div>
 
             <div class="live-player-box glass-card glow-card">
                 <div class="live-status-bar">
-                    <span class="live-tag"><i class="fas fa-broadcast-tower"></i> 🔴 LIVE NOW</span>
-                    <span class="viewer-count"><i class="fas fa-users"></i> 12.4K Watching Live</span>
+                    <span class="live-tag"><i class="fas fa-broadcast-tower"></i> 🔴 LIVE STREAM</span>
+                    <span class="next-service-tag"><i class="far fa-clock"></i> NEXT LIVE SERVICE: JUMAPILI 3:00 ASUBUHI</span>
                 </div>
                 <div class="video-responsive">
                     <iframe 
@@ -190,13 +190,13 @@
     <section id="videos" class="content-section tab-content">
         <div class="section-container">
             <div class="section-header">
-                <span class="sub-title"><i class="fab fa-youtube"></i> MEDIA CENTER</span>
-                <h2>MAFUNDISHO YA HIVI KARIBUNI (VIDEO)</h2>
+                <span class="sub-title"><i class="fab fa-youtube"></i> STREAMING MEDIA CENTER</span>
+                <h2>MASOMO NA MAFUNDISHO (VIDEO)</h2>
             </div>
 
             <div class="cards-grid" id="youtube-auto-grid">
                 <div class="loading-spinner">
-                    <i class="fas fa-spinner fa-spin"></i> Inaleta video kutoka YouTube...
+                    <i class="fas fa-circle-notch fa-spin"></i> Inaleta video kutoka YouTube...
                 </div>
             </div>
 
@@ -279,7 +279,7 @@
                         <p class="card-excerpt">
                             Jifunze jinsi maombi ya usiku yanavyovunja vifungo na kuleta majibu ya haraka katika maisha yako ya kila siku...
                         </p>
-                        <a href="#" class="btn-read-more">SOMA ZAIDI <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="btn-read-more">SOMA ZAIDI <i class="fas fa-arrow-right icon-slide"></i></a>
                     </div>
                 </div>
             </div>
@@ -356,7 +356,7 @@
         </div>
     </section>
 
-    <!-- FOOTER / MAWASILIANO -->
+    <!-- HIGH-END FOOTER / MAWASILIANO -->
     <footer id="contact" class="main-footer">
         <div class="footer-ambient-glow"></div>
         <div class="footer-container">
@@ -365,22 +365,25 @@
                     <div class="logo-icon-wrap">
                         <i class="fas fa-cross logo-cross"></i>
                     </div>
-                    <span class="logo-text">GWAJIMANIZATION</span>
+                    <div class="logo-text-wrap">
+                        <span class="logo-text">GWAJIMANIZATION</span>
+                        <span class="logo-subtext">GWAJIMANIZATION TEAM</span>
+                    </div>
                 </div>
                 <p class="footer-desc">
-                    Huduma ya Ufufuo na Uzima Ministries. Kurejesha tumaini, uponyaji na uzima tele kwa njia ya Neno la Mungu.
+                    Huduma ya Ufufuo na Uzima Ministries. Kurejesha tumaini, uponyaji na uzima tele kwa njia ya Neno la Mungu na nguvu za Roho Mtakatifu.
                 </p>
             </div>
 
             <div class="footer-col links-col">
-                <h4>QUICK LINKS</h4>
+                <h4>QUICK NAVIGATION</h4>
                 <ul>
-                    <li><a href="javascript:void(0)" onclick="goHome()">About</a></li>
-                    <li><a href="javascript:void(0)" onclick="showTab('live')">Mubashara</a></li>
-                    <li><a href="javascript:void(0)" onclick="showTab('videos')">Video</a></li>
-                    <li><a href="javascript:void(0)" onclick="showTab('audios')">Audio</a></li>
-                    <li><a href="javascript:void(0)" onclick="showTab('blog')">Blogu</a></li>
-                    <li><a href="javascript:void(0)" onclick="showTab('give')">Sadaka</a></li>
+                    <li><a href="javascript:void(0)" onclick="goHome()">About Ministry</a></li>
+                    <li><a href="javascript:void(0)" onclick="showTab('live')">Mubashara (Live)</a></li>
+                    <li><a href="javascript:void(0)" onclick="showTab('videos')">Video Library</a></li>
+                    <li><a href="javascript:void(0)" onclick="showTab('audios')">Audio Archives</a></li>
+                    <li><a href="javascript:void(0)" onclick="showTab('blog')">Blogu & Makala</a></li>
+                    <li><a href="javascript:void(0)" onclick="showTab('give')">Toa Sadaka</a></li>
                 </ul>
             </div>
 
@@ -398,16 +401,16 @@
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 GWAJIMANIZATION. All Rights Reserved.</p>
+            <p>&copy; 2026 GWAJIMANIZATION TEAM. All Rights Reserved. Built for Next-Gen Ministry Experience.</p>
         </div>
     </footer>
 
-    <!-- JAVASCRIPT ENGINE -->
+    <!-- ENGINE JAVASCRIPT -->
     <script>
-        // Sticky Glass Header Blur on Scroll
+        // Sticky Header Blur on Scroll
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
+            if (window.scrollY > 40) {
                 navbar.classList.add('scrolled');
             } else {
                 navbar.classList.remove('scrolled');
@@ -420,7 +423,7 @@
             mobileMenu.classList.toggle('active');
         }
 
-        // Load YouTube videos dynamically with Glassmorphism Cards
+        // Auto-Generate YouTube Video Cards
         const videoIDs = ["TxVWgod5YVI", "GdffYnGaTgA", "a2-h33_oTmY", "anJjdTOM16g"];
         const container = document.getElementById("youtube-auto-grid");
         
@@ -445,7 +448,7 @@
                             <h4 class="card-title">${title}</h4>
                             <p class="card-speaker"><i class="fas fa-check-circle"></i> ${author}</p>
                             <a href="https://youtu.be/${id}" target="_blank" class="btn-yt-play">
-                                TAZAMA YOUTUBE <i class="fas fa-external-link-alt"></i>
+                                TAZAMA YOUTUBE <i class="fas fa-external-link-alt icon-slide"></i>
                             </a>
                         </div>
                     </div>
@@ -458,7 +461,7 @@
             });
         }
 
-        // Show Tab Logic
+        // Tab Navigation System
         function showTab(tabId, btnElement) {
             const tabs = ['live', 'videos', 'audios', 'blog', 'give'];
             
@@ -510,7 +513,7 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Clipboard Copy
+        // Copy to Clipboard
         function copyToClipboard(text, btn) {
             navigator.clipboard.writeText(text).then(() => {
                 const originalText = btn.innerHTML;
@@ -526,7 +529,7 @@
             });
         }
 
-        // Simple Content Filter
+        // Content Search Filter
         function filterContent() {
             let input = document.getElementById('sermonSearch').value.toLowerCase();
             let cards = document.querySelectorAll('.media-card');
