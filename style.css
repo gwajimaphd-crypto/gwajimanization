@@ -26,7 +26,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%;
+    padding: 18px 5%;
     background-color: #0d1117;
     border-bottom: 1px solid #1f293d;
     position: sticky;
@@ -34,19 +34,39 @@ body {
     z-index: 1000;
 }
 
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    border: 2px solid #eab308;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-icon i {
+    color: #eab308;
+    font-size: 1.1rem;
+}
+
 .logo-text {
     font-weight: 900;
     font-size: 1.2rem;
     letter-spacing: 1px;
-    color: #ffffff;
+    color: #eab308;
 }
 
 .nav-links a {
     color: #9ca3af;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 12px;
     font-size: 0.85rem;
-    font-weight: 600;
+    font-weight: 700;
     transition: color 0.3s ease;
 }
 
@@ -58,10 +78,10 @@ body {
     background: #ffffff;
     color: #000000;
     border: none;
-    padding: 8px 16px;
-    font-weight: 700;
-    font-size: 0.75rem;
-    border-radius: 4px;
+    padding: 10px 18px;
+    font-weight: 800;
+    font-size: 0.8rem;
+    border-radius: 6px;
     cursor: pointer;
     transition: background 0.3s ease;
 }
@@ -101,7 +121,7 @@ body {
 .hero-title {
     font-size: 2.8rem;
     font-weight: 900;
-    line-height: 1.1;
+    line-height: 1.15;
     margin: 15px 0;
 }
 
@@ -111,9 +131,10 @@ body {
 
 .hero-desc {
     color: #9ca3af;
-    font-size: 1rem;
+    font-size: 0.95rem;
     margin-bottom: 25px;
-    max-width: 500px;
+    max-width: 580px;
+    line-height: 1.6;
 }
 
 .hero-btns {
@@ -149,8 +170,8 @@ body {
 }
 
 .hero-btns .btn-outline:hover {
-    border-color: #ff0000;
-    color: #ff0000;
+    border-color: #eab308;
+    color: #eab308;
 }
 
 .hero-image-box {
@@ -198,7 +219,7 @@ body {
 }
 
 .sub-title {
-    color: #ff0000;
+    color: #eab308;
     font-size: 0.75rem;
     font-weight: 800;
     letter-spacing: 1.5px;
@@ -291,7 +312,7 @@ body {
 }
 
 /* ==========================================
-   GIVE SECTION
+   GIVE SECTION (SADAKA)
    ========================================== */
 .give-section {
     padding: 60px 5%;
@@ -301,7 +322,7 @@ body {
 }
 
 .give-container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -312,7 +333,7 @@ body {
 
 .give-container p {
     color: #9ca3af;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .payment-grid {
@@ -326,6 +347,11 @@ body {
     border: 1px solid #1f293d;
     padding: 20px;
     border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.pay-card:hover {
+    border-color: #eab308;
 }
 
 .pay-card h4 {
@@ -335,21 +361,56 @@ body {
 }
 
 .pay-number {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 800;
     color: #ffffff;
 }
 
 /* ==========================================
-   FOOTER
+   FOOTER NA MAWASILIANO
    ========================================== */
 footer {
     padding: 30px 5%;
-    text-align: center;
     background-color: #080a0e;
     border-top: 1px solid #12161f;
-    color: #6b7280;
-    font-size: 0.85rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.social-links a {
+    font-size: 1.1rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    transition: opacity 0.3s ease;
+}
+
+.social-links a:hover {
+    opacity: 0.8;
+}
+
+.wa-link {
+    color: #25D366;
+}
+
+.tiktok-link {
+    color: #ffffff;
 }
 
 /* ==========================================
@@ -370,10 +431,15 @@ footer {
     }
 
     .nav-links {
-        display: none; /* Inaficha menu za kawaida kwenye simu */
+        display: none; /* Inaficha menu kwenye simu ili kupunguza msongamano */
     }
 
     .hero-title {
         font-size: 2.1rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
     }
 }
