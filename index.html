@@ -8,16 +8,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="main-header" id="navbar">
+    <header class="main-header">
         <div class="header-container">
-            <div class="logo-box" onclick="showTab('home')">
+            <div class="logo-box" onclick="showSection('home')">
                 <div class="logo-icon-wrap">
                     <i class="fas fa-cross logo-cross"></i>
                 </div>
@@ -28,96 +27,109 @@
             </div>
 
             <nav class="nav-links">
-                <a href="javascript:void(0)" onclick="showTab('home')" class="nav-item active-link" id="nav-home">HOME / ABOUT</a>
-                <a href="javascript:void(0)" onclick="showTab('live')" class="nav-item live-link" id="nav-live">
+                <a href="javascript:void(0)" onclick="showSection('home')" class="nav-item active-link" id="nav-home">HOME</a>
+                <a href="javascript:void(0)" onclick="showSection('about')" class="nav-item" id="nav-about">ABOUT</a>
+                <a href="javascript:void(0)" onclick="showSection('live')" class="nav-item live-link" id="nav-live">
                     <span class="live-pulse-dot"></span> MUBASHARA
                 </a>
-                <a href="javascript:void(0)" onclick="showTab('videos')" class="nav-item" id="nav-videos">VIDEO</a>
-                <a href="javascript:void(0)" onclick="showTab('audios')" class="nav-item" id="nav-audios">AUDIO</a>
-                <a href="javascript:void(0)" onclick="showTab('blog')" class="nav-item" id="nav-blog">BLOGU</a>
-                <a href="javascript:void(0)" onclick="showTab('give')" class="nav-item" id="nav-give">SADAKA</a>
-                <a href="javascript:void(0)" onclick="showTab('contact')" class="nav-item" id="nav-contact">MAWASILIANO</a>
+                <a href="javascript:void(0)" onclick="showSection('videos')" class="nav-item" id="nav-videos">VIDEO</a>
+                <a href="javascript:void(0)" onclick="showSection('audios')" class="nav-item" id="nav-audios">AUDIO</a>
+                <a href="javascript:void(0)" onclick="showSection('blog')" class="nav-item" id="nav-blog">BLOGU</a>
+                <a href="javascript:void(0)" onclick="showSection('give')" class="nav-item" id="nav-give">SADAKA</a>
+                <a href="javascript:void(0)" onclick="showSection('contact')" class="nav-item" id="nav-contact">MAWASILIANO</a>
             </nav>
 
             <div class="nav-right">
-                <button onclick="showTab('videos')" class="nav-btn-gold">
+                <button onclick="showSection('videos')" class="nav-btn-gold">
                     <i class="fas fa-play"></i> <span>MASOMO MAPYA</span>
                 </button>
                 <div class="mobile-toggle" onclick="toggleMobileMenu()">
-                    <i class="fas fa-bars-staggered"></i>
+                    <i class="fas fa-bars"></i>
                 </div>
             </div>
         </div>
 
         <div class="mobile-menu" id="mobileMenu">
-            <a href="javascript:void(0)" onclick="showTab('home'); toggleMobileMenu();">HOME / ABOUT</a>
-            <a href="javascript:void(0)" onclick="showTab('live'); toggleMobileMenu();">🔴 MUBASHARA (LIVE)</a>
-            <a href="javascript:void(0)" onclick="showTab('videos'); toggleMobileMenu();">VIDEO</a>
-            <a href="javascript:void(0)" onclick="showTab('audios'); toggleMobileMenu();">AUDIO</a>
-            <a href="javascript:void(0)" onclick="showTab('blog'); toggleMobileMenu();">BLOGU</a>
-            <a href="javascript:void(0)" onclick="showTab('give'); toggleMobileMenu();">SADAKA</a>
-            <a href="javascript:void(0)" onclick="showTab('contact'); toggleMobileMenu();">MAWASILIANO</a>
+            <a href="javascript:void(0)" onclick="showSection('home'); toggleMobileMenu();">HOME</a>
+            <a href="javascript:void(0)" onclick="showSection('about'); toggleMobileMenu();">ABOUT</a>
+            <a href="javascript:void(0)" onclick="showSection('live'); toggleMobileMenu();">🔴 MUBASHARA</a>
+            <a href="javascript:void(0)" onclick="showSection('videos'); toggleMobileMenu();">VIDEO</a>
+            <a href="javascript:void(0)" onclick="showSection('audios'); toggleMobileMenu();">AUDIO</a>
+            <a href="javascript:void(0)" onclick="showSection('blog'); toggleMobileMenu();">BLOGU</a>
+            <a href="javascript:void(0)" onclick="showSection('give'); toggleMobileMenu();">SADAKA</a>
+            <a href="javascript:void(0)" onclick="showSection('contact'); toggleMobileMenu();">MAWASILIANO</a>
         </div>
     </header>
 
-    <section class="hero-section">
-        <div class="hero-container">
-            <div class="hero-text">
-                <div class="gold-badge">
-                    <span class="badge-dot"></span> GWAJIMANIZATION TEAM
-                </div>
-                
-                <h1 class="hero-title">
-                    SISI SI KANISA, <br>
-                    <span class="gold-gradient-text">SISI NI FAMILIA.</span>
-                </h1>
-                
-                <p class="hero-desc">
-                    Dkt. Josephat Gwajima ni Mchungaji Mkuu wa mojawapo ya makanisa makubwa zaidi Afrika Mashariki. Pia ni Askofu Mkuu na mwanzilishi wa Ufufuo na Uzima Ministries. Mungu amekuwa akimtumia katika huduma ya kufufua wafu, kuponya wagonjwa, na kutenda ishara na maajabu kwa jina la Yesu Kristo.
-                </p>
+    <div class="page-body">
 
-                <div class="hero-btns">
-                    <button onclick="showTab('live')" class="btn-live">
-                        <span class="btn-pulse-dot"></span> WATCH LIVE <i class="fas fa-arrow-right icon-slide"></i>
-                    </button>
-                    <button onclick="showTab('videos')" class="btn-glass">WATCH VIDEOS</button>
-                    <button onclick="showTab('audios')" class="btn-glass">LISTEN AUDIO</button>
-                    <button onclick="showTab('blog')" class="btn-glass">READ ARTICLES</button>
-                </div>
-            </div>
-
-            <div class="hero-image-wrap">
-                <div class="hero-image-card glass-card">
-                    <img src="askofu.jpg" alt="Askofu Dr. Josephat Gwajima" class="hero-img">
-                    <div class="hero-card-overlay">
-                        <p class="hero-card-text">FUATILIA MASOMO YA ASKOFU DR JOSEPHAT GWAJIMA KUPITIA WEBSITE HII</p>
-                        <span class="hero-card-sub">PIA UNAWEZA KUTUPATA TIKTOK: @GWAJIMANIZATION</span>
+        <section id="sec-about" class="page-section">
+            <div class="hero-container">
+                <div class="hero-text">
+                    <div class="gold-badge">
+                        <span class="badge-dot"></span> GWAJIMANIZATION TEAM
                     </div>
-                    <div class="hero-img-badge glass-card">
-                        <div class="badge-icon"><i class="fas fa-crown"></i></div>
-                        <div>
-                            <h4>ASKOFU DR. JOSEPHAT GWAJIMA</h4>
-                            <p>Ufufuo na Uzima Ministries</p>
+                    
+                    <h1 class="hero-title">
+                        SISI SI KANISA, <br>
+                        <span class="gold-gradient-text">SISI NI FAMILIA.</span>
+                    </h1>
+                    
+                    <p class="hero-desc">
+                        Dkt. Josephat Gwajima ni Mchungaji Mkuu wa mojawapo ya makanisa makubwa zaidi Afrika Mashariki. Pia ni Askofu Mkuu na mwanzilishi wa Ufufuo na Uzima Ministries. Mungu amekuwa akimtumia katika huduma ya kufufua wafu, kuponya wagonjwa, na kutenda ishara na maajabu kwa jina la Yesu Kristo.
+                    </p>
+
+                    <div class="hero-btns">
+                        <button onclick="showSection('live')" class="btn-live">
+                            <span class="btn-pulse-dot"></span> WATCH LIVE <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button onclick="showSection('videos')" class="btn-glass">WATCH VIDEOS</button>
+                        <button onclick="showSection('audios')" class="btn-glass">LISTEN AUDIO</button>
+                        <button onclick="showSection('blog')" class="btn-glass">READ ARTICLES</button>
+                    </div>
+                </div>
+
+                <div class="hero-image-wrap">
+                    <div class="hero-card glass-card">
+                        <img src="askofu.jpg" alt="Askofu Dr. Josephat Gwajima" class="hero-img">
+                        <div class="hero-card-banner">
+                            <p class="banner-title">FUATILIA MASOMO YA ASKOFU DR JOSEPHAT GWAJIMA KUPITIA WEBSITE HII</p>
+                            <span class="banner-sub">PIA UNAWEZA KUTUPATA TIKTOK: @GWAJIMANIZATION</span>
+                        </div>
+                        <div class="hero-card-footer">
+                            <i class="fas fa-crown gold-icon"></i>
+                            <div>
+                                <h4>ASKOFU DR. JOSEPHAT GWAJIMA</h4>
+                                <p>Ufufuo na Uzima Ministries</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="section-divider"></div>
+        </section>
 
-    <main class="dynamic-content-area">
-        <div class="search-section">
-            <div class="search-container glass-card">
-                <i class="fas fa-magnifying-glass search-icon"></i>
-                <input type="text" id="sermonSearch" placeholder="Search sermons, teachings, videos, audio..." onkeyup="filterContent()">
-                <button class="search-btn"><i class="fas fa-sliders"></i> Filter</button>
+        <section id="sec-home" class="page-section active-section">
+            <div class="search-section">
+                <div class="search-container glass-card">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="sermonSearch" placeholder="Search sermons, teachings, videos, audio...">
+                    <button class="search-btn"><i class="fas fa-sliders-h"></i> Filter</button>
+                </div>
             </div>
-        </div>
 
-        <div id="tab-live" class="tab-pane">
+            <div class="home-feed-grid">
+                <div class="feed-header">
+                    <h2>MAHUBIRI NA MASOMO MAPYA</h2>
+                </div>
+                <div class="cards-grid" id="youtube-auto-grid"></div>
+            </div>
+        </section>
+
+        <section id="sec-live" class="page-section">
             <div class="section-container">
-                <div class="section-header text-center">
-                    <span class="sub-title"><span class="pulse-red"></span> CINEMATIC LIVE EXPERIENCE</span>
+                <div class="section-header">
+                    <span class="sub-title">🔴 CINEMATIC LIVE EXPERIENCE</span>
                     <h2>MAHUBIRI MUBASHARA (LIVE)</h2>
                 </div>
                 <div class="live-player-box glass-card">
@@ -130,19 +142,19 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div id="tab-videos" class="tab-pane">
+        <section id="sec-videos" class="page-section">
             <div class="section-container">
                 <div class="section-header">
                     <span class="sub-title"><i class="fab fa-youtube"></i> STREAMING MEDIA CENTER</span>
                     <h2>MASOMO NA MAFUNDISHO (VIDEO)</h2>
                 </div>
-                <div class="cards-grid" id="youtube-auto-grid"></div>
+                <div class="cards-grid" id="youtube-video-page"></div>
             </div>
-        </div>
+        </section>
 
-        <div id="tab-audios" class="tab-pane">
+        <section id="sec-audios" class="page-section">
             <div class="section-container">
                 <div class="section-header">
                     <span class="sub-title"><i class="fas fa-headphones"></i> DIGITAL SOUND VAULT</span>
@@ -150,152 +162,69 @@
                 </div>
                 <div class="cards-grid">
                     <div class="media-card glass-card">
-                        <div class="media-card-body">
-                            <span class="card-tag">SOMO LA SAUTI</span>
-                            <h4 class="card-title">Kipaji Cha Asili na Tabia Yako</h4>
-                            <p class="card-speaker">Askofu Josephat Gwajima</p>
-                            <audio controls class="custom-audio-player">
-                                <source src="audio1.mp3" type="audio/mpeg">
-                            </audio>
-                        </div>
+                        <span class="card-tag">AUDIO</span>
+                        <h4 class="card-title">Kipaji Cha Asili na Tabia Yako</h4>
+                        <p class="card-speaker">Askofu Josephat Gwajima</p>
+                        <audio controls class="custom-audio">
+                            <source src="audio1.mp3" type="audio/mpeg">
+                        </audio>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div id="tab-blog" class="tab-pane">
+        <section id="sec-blog" class="page-section">
             <div class="section-container">
                 <div class="section-header">
-                    <span class="sub-title"><i class="fas fa-book-open"></i> KNOWLEDGE BASE</span>
-                    <h2>MAKALA NA BLOGU</h2>
+                    <span class="sub-title"><i class="fas fa-book-open"></i> MAKALA NA BLOGU</span>
+                    <h2>MASOMO YA KUANDIKWA</h2>
                 </div>
                 <div class="cards-grid">
                     <div class="media-card glass-card">
-                        <div class="media-card-body">
-                            <span class="card-tag">MAKALA MPYA</span>
-                            <h4 class="card-title">Nguvu ya Maombi ya Usiku na Siri Zake</h4>
-                            <p class="card-excerpt">Jifunze jinsi maombi ya usiku yanavyovunja vifungo na kuleta majibu ya haraka...</p>
-                        </div>
+                        <span class="card-tag">BLOGU</span>
+                        <h4 class="card-title">Nguvu ya Maombi ya Usiku</h4>
+                        <p class="card-excerpt">Jifunze jinsi maombi ya usiku yanavyovunja vifungo na kuleta majibu ya haraka...</p>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div id="tab-give" class="tab-pane">
+        <section id="sec-give" class="page-section">
             <div class="section-container">
                 <div class="section-header text-center">
-                    <span class="sub-title"><i class="fas fa-hand-holding-dollar"></i> SECURE GIVING</span>
-                    <h2>KUTUMA SADAKA</h2>
+                    <span class="sub-title">SECURE GIVING</span>
+                    <h2>TOA SADAKA / CHANGO</h2>
                 </div>
                 <div class="payment-grid">
                     <div class="payment-card glass-card">
-                        <span class="pay-brand">M-PESA</span>
-                        <p class="pay-number">+255 763 432 025</p>
-                        <button class="btn-copy" onclick="copyToClipboard('+255763432025', this)">NAKILI</button>
+                        <h3>M-PESA</h3>
+                        <p class="pay-num">+255 763 432 025</p>
+                        <button class="btn-copy" onclick="copyNum('+255763432025', this)">NAKILI</button>
                     </div>
                     <div class="payment-card glass-card">
-                        <span class="pay-brand">AIRTEL MONEY</span>
-                        <p class="pay-number">+255 787 485 811</p>
-                        <button class="btn-copy" onclick="copyToClipboard('+255787485811', this)">NAKILI</button>
+                        <h3>AIRTEL MONEY</h3>
+                        <p class="pay-num">+255 787 485 811</p>
+                        <button class="btn-copy" onclick="copyNum('+255787485811', this)">NAKILI</button>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div id="tab-contact" class="tab-pane">
+        <section id="sec-contact" class="page-section">
             <div class="section-container">
-                <div class="contact-box glass-card">
-                    <h3>MAWASILIANO & SOCIAL</h3>
-                    <div class="social-btns-wrap">
-                        <a href="https://wa.me/255763432025" target="_blank" class="social-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                        <a href="https://www.tiktok.com/@gwajimanization_" target="_blank" class="social-btn tiktok"><i class="fab fa-tiktok"></i> TikTok</a>
+                <div class="contact-card glass-card text-center">
+                    <h2>MAWASILIANO & SOCIAL MEDIA</h2>
+                    <p style="margin-bottom: 20px; color: #a1a1aa;">Tufuatilie kwenye mitandao yetu ya kijamii:</p>
+                    <div class="social-links-wrap">
+                        <a href="https://wa.me/255763432025" target="_blank" class="social-btn wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://www.tiktok.com/@gwajimanization_" target="_blank" class="social-btn tt"><i class="fab fa-tiktok"></i> TikTok</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
+        </section>
+
+    </div>
 
     <footer class="main-footer">
         <div class="footer-container">
-            <div class="footer-col">
-                <div class="logo-box">
-                    <div class="logo-icon-wrap"><i class="fas fa-cross logo-cross"></i></div>
-                    <div class="logo-text-wrap">
-                        <span class="logo-text">GWAJIMANIZATION</span>
-                        <span class="logo-subtext">GWAJIMANIZATION TEAM</span>
-                    </div>
-                </div>
-                <p class="footer-desc">Huduma ya Ufufuo na Uzima Ministries. Kurejesha tumaini, uponyaji na uzima tele.</p>
-            </div>
-            <div class="footer-col">
-                <h4>QUICK NAVIGATION</h4>
-                <ul>
-                    <li><a href="javascript:void(0)" onclick="showTab('home')">Home / About</a></li>
-                    <li><a href="javascript:void(0)" onclick="showTab('live')">Mubashara (Live)</a></li>
-                    <li><a href="javascript:void(0)" onclick="showTab('videos')">Video Library</a></li>
-                    <li><a href="javascript:void(0)" onclick="showTab('give')">Toa Sadaka</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 GWAJIMANIZATION TEAM. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        function showTab(tabName) {
-            // Hide all tab panes
-            const panes = document.querySelectorAll('.tab-pane');
-            panes.forEach(pane => pane.classList.remove('active-pane'));
-
-            // Remove active class from nav items
-            const navItems = document.querySelectorAll('.nav-item');
-            navItems.forEach(item => item.classList.remove('active-link'));
-
-            // Show selected tab if not 'home'
-            if (tabName !== 'home') {
-                const selectedPane = document.getElementById('tab-' + tabName);
-                if (selectedPane) {
-                    selectedPane.classList.add('active-pane');
-                    selectedPane.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            } else {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-
-            // Set active class on menu link
-            const activeNav = document.getElementById('nav-' + tabName);
-            if (activeNav) activeNav.classList.add('active-link');
-        }
-
-        function toggleMobileMenu() {
-            document.getElementById('mobileMenu').classList.toggle('active');
-        }
-
-        // Auto load YouTube videos
-        const videoIDs = ["TxVWgod5YVI", "GdffYnGaTgA", "a2-h33_oTmY"];
-        const container = document.getElementById("youtube-auto-grid");
-        if (container) {
-            container.innerHTML = "";
-            videoIDs.forEach(id => {
-                const thumbnail = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
-                const cardHTML = `
-                <div class="media-card glass-card">
-                    <img src="${thumbnail}" style="width:100%; border-radius:12px; margin-bottom:12px;">
-                    <span class="card-tag">SOMO LA VIDEO</span>
-                    <h4 class="card-title">Somo la Ufufuo na Uzima</h4>
-                    <a href="https://youtu.be/${id}" target="_blank" class="btn-yt-play">TAZAMA YOUTUBE <i class="fas fa-external-link-alt"></i></a>
-                </div>`;
-                container.innerHTML += cardHTML;
-            });
-        }
-
-        function copyToClipboard(text, btn) {
-            navigator.clipboard.writeText(text).then(() => {
-                btn.innerText = "IMEPIGWA NAKILI!";
-                setTimeout(() => { btn.innerText = "NAKILI"; }, 2000);
-            });
-        }
-    </script>
-</body>
-</html>
+            <div class
