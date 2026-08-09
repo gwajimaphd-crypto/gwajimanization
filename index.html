@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gwajimanization Team — Official Portal</title>
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
+        /* ==========================================================================
+           GWAJIMANIZATION TEAM — CORE STYLE
+           ========================================================================== */
         :root {
             --bg-dark: #0a0b0e;
             --card-bg: rgba(22, 25, 35, 0.75);
@@ -17,53 +23,80 @@
             --text-muted: #9ca3af;
             --border-glass: rgba(212, 175, 55, 0.25);
         }
+
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
-        body { background-color: var(--bg-dark); color: var(--text-light); min-height: 100vh; overflow-x: hidden; }
-        
-        .main-header { position: sticky; top: 0; z-index: 1000; background: rgba(10, 11, 14, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-glass); padding: 15px 24px; }
-        .nav-container { max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-        .brand-logo { font-family: 'Cinzel', serif; font-size: 1.2rem; font-weight: 900; color: var(--gold-primary); text-decoration: none; }
-        
-        .nav-menu { display: flex; gap: 20px; }
-        .nav-link { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 600; cursor: pointer; }
+        body { background-color: var(--bg-dark); color: var(--text-light); min-height: 100vh; overflow-x: hidden; line-height: 1.5; }
+
+        .main-header { position: sticky; top: 0; z-index: 1000; background: rgba(10, 11, 14, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-glass); width: 100%; }
+        .nav-container { max-width: 1280px; margin: 0 auto; padding: 15px 24px; display: flex; justify-content: space-between; align-items: center; }
+        .brand-logo { font-family: 'Cinzel', serif; font-size: 1.2rem; font-weight: 900; color: var(--gold-primary); text-decoration: none; letter-spacing: 1px; white-space: nowrap; }
+        .brand-logo span { color: var(--text-light); }
+        .desktop-nav { display: flex; gap: 18px; align-items: center; }
+        .nav-link { color: var(--text-muted); text-decoration: none; font-size: 0.88rem; font-weight: 600; transition: all 0.3s ease; cursor: pointer; }
         .nav-link:hover, .nav-link.active { color: var(--gold-primary); }
+
+        .mobile-toggle { display: none; background: none; border: none; color: var(--gold-primary); font-size: 1.8rem; cursor: pointer; }
+        .mobile-menu { display: none; flex-direction: column; background: #111319; padding: 15px 24px; border-bottom: 1px solid var(--border-glass); }
+        .mobile-menu.active { display: flex; }
+        .mobile-menu a { color: var(--text-light); text-decoration: none; padding: 12px 0; font-weight: 600; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
 
         .main-layout { max-width: 1280px; margin: 30px auto; padding: 0 20px; }
         .tab-content { display: none; }
         .tab-content.active-tab { display: block; }
+        .glass-card { background: var(--card-bg); border: 1px solid var(--border-glass); backdrop-filter: blur(10px); border-radius: 16px; padding: 24px; margin-bottom: 24px; box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); }
         
-        .glass-card { background: var(--card-bg); border: 1px solid var(--border-glass); backdrop-filter: blur(10px); border-radius: 16px; padding: 25px; margin-bottom: 25px; }
+        .card-tag { font-size: 0.75rem; font-weight: 800; color: var(--gold-primary); letter-spacing: 1.5px; text-transform: uppercase; display: block; margin-bottom: 8px; }
+        .hero-title { font-family: 'Cinzel', serif; font-size: clamp(1.5rem, 4vw, 2.5rem); margin: 10px 0; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-desc { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; }
+        
+        .section-header { margin: 30px 0 15px 0; }
+        .section-header h2 { font-family: 'Cinzel', serif; font-size: 1.4rem; color: var(--text-light); margin-top: 4px; }
+        
+        /* Video & Social Buttons */
         .video-responsive { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; }
         .video-responsive iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
         
-        .btn-whatsapp { background: #25D366; color: #fff; padding: 15px; border-radius: 8px; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 10px; font-weight: bold; margin-bottom: 15px; }
-        .btn-tiktok { background: #000; color: #fff; padding: 15px; border-radius: 8px; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 10px; font-weight: bold; border: 1px solid #333; }
+        .btn-whatsapp { background: #25D366; color: #fff; padding: 14px; border-radius: 8px; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 10px; font-weight: bold; margin-bottom: 10px; }
+        .btn-tiktok { background: #000; color: #fff; padding: 14px; border-radius: 8px; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 10px; font-weight: bold; border: 1px solid #333; }
         
-        @media (max-width: 768px) { .nav-menu { gap: 10px; font-size: 0.75rem; } }
+        .live-pulse-dot { display: inline-block; width: 8px; height: 8px; background-color: #ef4444; border-radius: 50%; animation: pulse 1.6s infinite; }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); } 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); } }
+
+        @media (max-width: 850px) { .desktop-nav { display: none; } .mobile-toggle { display: block; } }
     </style>
 </head>
 <body>
 
     <header class="main-header">
         <div class="nav-container">
-            <a href="#" class="brand-logo">GWAJIMANIZATION</a>
-            <nav class="nav-menu">
-                <a class="nav-link active" onclick="showTab('home')">Mwanzo</a>
-                <a class="nav-link" onclick="showTab('live')">LIVE</a>
-                <a class="nav-link" onclick="showTab('mawasiliano')">Mawasiliano</a>
+            <a href="#" class="brand-logo">GWAJIMANIZATION <span>TEAM</span></a>
+            <nav class="desktop-nav">
+                <a class="nav-link active" data-tab="home">Mwanzo</a>
+                <a class="nav-link" data-tab="live"><span class="live-pulse-dot"></span> LIVE</a>
+                <a class="nav-link" data-tab="videos">Masomo</a>
+                <a class="nav-link" data-tab="sadaka">Sadaka</a>
+                <a class="nav-link" data-tab="mawasiliano">Mawasiliano</a>
             </nav>
+            <button class="mobile-toggle" id="mobile-toggle-btn">☰</button>
+        </div>
+        <div class="mobile-menu" id="mobile-dropdown">
+            <a data-tab="home">Mwanzo</a>
+            <a data-tab="live">LIVE STREAM</a>
+            <a data-tab="mawasiliano">Mawasiliano</a>
         </div>
     </header>
 
     <main class="main-layout">
         <section id="home" class="tab-content active-tab">
             <div class="glass-card">
-                <h1>KARIBU GWAJIMANIZATION</h1>
-                <p>Pata mafundisho ya Askofu Josephat Gwajima.</p>
+                <h1 class="hero-title">KARIBU GWAJIMANIZATION</h1>
+                <p class="hero-desc">Portal rasmi ya huduma ya Askofu Josephat Gwajima.</p>
             </div>
         </section>
 
+        <!-- Live Section (Updated with Channel ID) -->
         <section id="live" class="tab-content">
+            <div class="section-header"><h2>Live Stream</h2></div>
             <div class="glass-card">
                 <div class="video-responsive">
                     <iframe src="https://www.youtube.com/embed/live_stream?channel=UCj8LUerrlq3Hw9mWpt_HJHA" allowfullscreen></iframe>
@@ -71,23 +104,29 @@
             </div>
         </section>
 
+        <!-- Mawasiliano Section (Newly added) -->
         <section id="mawasiliano" class="tab-content">
+            <div class="section-header"><h2>Mawasiliano</h2></div>
             <div class="glass-card">
-                <h2>Mawasiliano Yetu</h2>
-                <br>
-                <a href="https://wa.me/255766405739" class="btn-whatsapp" target="_blank">WhatsApp: 0766 405 739</a>
-                <a href="https://www.tiktok.com/@gwajimanization_" class="btn-tiktok" target="_blank">TikTok: @gwajimanization_</a>
+                <a href="https://wa.me/255766405739" target="_blank" class="btn-whatsapp">WhatsApp: 0766 405 739</a>
+                <a href="https://www.tiktok.com/@gwajimanization_" target="_blank" class="btn-tiktok">TikTok: @gwajimanization_</a>
             </div>
         </section>
     </main>
 
     <script>
-        function showTab(tabId) {
-            document.querySelectorAll('.tab-content').forEach(t => t.style.display = 'none');
-            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-            document.getElementById(tabId).style.display = 'block';
-            event.currentTarget.classList.add('active');
-        }
+        document.querySelectorAll('[data-tab]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active-tab'));
+                document.querySelectorAll('.nav-link').forEach(n => n.classList.remove('active'));
+                document.getElementById(link.getAttribute('data-tab')).classList.add('active-tab');
+                link.classList.add('active');
+            });
+        });
+        document.getElementById('mobile-toggle-btn').addEventListener('click', () => {
+            document.getElementById('mobile-dropdown').classList.toggle('active');
+        });
     </script>
 </body>
 </html>
