@@ -55,8 +55,7 @@
                     <i class="fas fa-crown"></i> GWAJIMANIZATION MEDIA
                 </div>
                 <h1 class="hero-title">
-                    SISI SI KANISA TU.<br>
-                    <span class="gold-highlight">SISI NI FAMILIA.</span>
+                    SISI SI KANISA, <span class="gold-highlight">SISI NI FAMILIA.</span>
                 </h1>
                 
                 <p class="hero-desc">
@@ -347,7 +346,7 @@
                     <a href="https://wa.me/255763432025" target="_blank" class="social-btn whatsapp">
                         <i class="fab fa-whatsapp"></i> WhatsApp
                     </a>
-                    <a href="https://www.tiktok.com/@gwajimanization" target="_blank" class="social-btn tiktok">
+                    <a href="https://www.tiktok.com/@gwajimanization_" target="_blank" class="social-btn tiktok">
                         <i class="fab fa-tiktok"></i> TikTok
                     </a>
                 </div>
@@ -405,7 +404,6 @@
             
             // Ukibonyeza Mawasiliano -> Shuka kwenye Footer moja kwa moja
             if (tabId === 'contact') {
-                // Ficha sehemu zingine zote za Tab
                 tabs.forEach(id => {
                     const el = document.getElementById(id);
                     if (el) el.classList.remove('active-tab');
@@ -418,7 +416,6 @@
                 return;
             }
 
-            // Onyesha tab iliyobonyezwa pekee, fichua zingine
             tabs.forEach(id => {
                 const el = document.getElementById(id);
                 if (el) {
@@ -431,7 +428,6 @@
                 }
             });
 
-            // Badilisha Rangi ya Vifungo vya Hero kuwa Kijani (#22c55e)
             if (btnElement && !btnElement.classList.contains('btn-live')) {
                 const whiteBtns = document.querySelectorAll('.hero-btns .btn-white');
                 whiteBtns.forEach(btn => btn.classList.remove('btn-active'));
