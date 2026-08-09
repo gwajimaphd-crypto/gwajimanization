@@ -1,343 +1,116 @@
-/* GLOBAL RESETS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GWAJIMANIZATION | Ministry Portal</title>
+    <link rel="stylesheet" href="style.css?v=2.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
 
-body {
-    background-color: #08080c;
-    color: #ffffff;
-    font-family: 'Montserrat', sans-serif;
-    overflow-x: hidden;
-}
+    <header class="top-nav">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo-container">
+                <img src="logo.svg" alt="Gwajimanization Logo" class="site-logo">
+            </a>
+            <nav class="nav-links">
+                <a href="#home" class="active">HOME</a>
+                <a href="#about">ABOUT US</a>
+                <a href="#mahubiri">MEDIA CENTER</a>
+                <a href="#sadaka">GIVE ONLINE</a>
+                <a href="#contact">CONTACT</a>
+            </nav>
+        </div>
+    </header>
 
-/* TOP NAVIGATION */
-.top-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(10, 10, 15, 0.85);
-    backdrop-filter: blur(15px);
-    z-index: 999;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-    padding: 0.8rem 2rem;
-}
+    <section id="home" class="hero-banner-section">
+        <div class="banner-content">
+            <div class="banner-tagline">WELCOME TO OUR OFFICIAL PORTAL</div>
+            <h1 class="gold-gradient-title">GWAJIMANIZATION</h1>
+            <p class="banner-subtitle">SUNDAY SERVICE • 8:00 AM & 10:30 AM</p>
+            <p class="ministering-tag">MINISTERING: <strong>BISHOP JOSEPHAT GWAJIMA</strong></p>
+            
+            <div class="cta-button-group">
+                <a href="#mahubiri" class="cta-btn primary-red"><i class="fas fa-play-circle"></i> SIKILIZA MAHUBIRI</a>
+                <a href="#sadaka" class="cta-btn primary-gold"><i class="fas fa-hand-holding-heart"></i> TOA SADAKA</a>
+            </div>
+        </div>
+        
+        <div class="bishop-hero-cutout">
+            <img src="askofu.jpg" alt="Bishop Josephat Gwajima" class="bishop-portrait">
+        </div>
+    </section>
 
-.nav-wrapper {
-    max-width: 1300px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    <div class="quick-action-bar">
+        <div class="action-item">
+            <i class="fas fa-pray"></i>
+            <div>
+                <h4>Maombezi</h4>
+                <p>Tuma ombi lako la maombi</p>
+            </div>
+        </div>
+        <div class="action-item">
+            <i class="fas fa-bible"></i>
+            <div>
+                <h4>Mafundisho</h4>
+                <p>Sikiliza na pakua audio</p>
+            </div>
+        </div>
+        <div class="action-item">
+            <i class="fas fa-hand-holding-usd"></i>
+            <div>
+                <h4>Sadaka</h4>
+                <p>M-Pesa, TigoPesa, HaloPesa</p>
+            </div>
+        </div>
+    </div>
 
-.site-logo {
-    height: 55px;
-    width: auto;
-}
+    <section id="about" class="about-ministry">
+        <div class="section-title-box">
+            <span class="sub-heading">KUHUSU HUDUMA</span>
+            <h2>GWAJIMANIZATION PORTAL</h2>
+            <div class="divider-line"></div>
+        </div>
+        <div class="about-content-card">
+            <p>Jukwaa rasmi la kidigitali linalokusogezea huduma, mafundisho, na mahubiri ya kiroho kutoka kwa Askofu Josephat Gwajima mahali popote ulipo duniani.</p>
+        </div>
+    </section>
 
-.nav-links a {
-    color: #e2e8f0;
-    text-decoration: none;
-    margin-left: 2rem;
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    transition: color 0.3s;
-}
+    <section id="sadaka" class="giving-banner-section">
+        <div class="section-title-box">
+            <span class="sub-heading">BARIKI HUDUMA</span>
+            <h2>TOA SADAKA MTANDAONI</h2>
+            <div class="divider-line"></div>
+        </div>
+        
+        <div class="pay-cards-row">
+            <div class="pay-box">
+                <i class="fas fa-mobile-alt pay-icon"></i>
+                <h3>M-PESA</h3>
+                <div class="num">0766 405 739</div>
+            </div>
+            <div class="pay-box">
+                <i class="fas fa-mobile-alt pay-icon"></i>
+                <h3>TIGO PESA</h3>
+                <div class="num">0652 291 937</div>
+            </div>
+            <div class="pay-box">
+                <i class="fas fa-mobile-alt pay-icon"></i>
+                <h3>HALOPESA</h3>
+                <div class="num">0620 164 130</div>
+            </div>
+        </div>
+    </section>
 
-.nav-links a:hover, .nav-links a.active {
-    color: #d4af37;
-}
+    <footer class="site-footer">
+        <div class="footer-socials">
+            <a href="https://wa.me/255766405739" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="https://www.tiktok.com/@gwajimanization_" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+        </div>
+        <p>&copy; 2026 GWAJIMANIZATION. Haki zote zimehifadhiwa.</p>
+    </footer>
 
-/* HERO BANNER SECTION */
-.hero-banner-section {
-    position: relative;
-    min-height: 90vh;
-    padding-top: 100px;
-    background: linear-gradient(135deg, #4a0000 0%, #120000 50%, #08080c 100%);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
-
-.banner-content {
-    flex: 1;
-    z-index: 2;
-    max-width: 650px;
-}
-
-.banner-tagline {
-    color: #d4af37;
-    font-size: 0.9rem;
-    font-weight: 700;
-    letter-spacing: 3px;
-    margin-bottom: 0.5rem;
-}
-
-.gold-gradient-title {
-    font-family: 'Cinzel', serif;
-    font-size: 3.8rem;
-    font-weight: 900;
-    background: linear-gradient(180deg, #fff2a3 0%, #d4af37 50%, #aa7c11 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8);
-    line-height: 1.1;
-    margin-bottom: 1rem;
-}
-
-.banner-subtitle {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #ffffff;
-    letter-spacing: 1px;
-    margin-bottom: 0.5rem;
-}
-
-.ministering-tag {
-    color: #cbd5e1;
-    font-size: 1rem;
-    margin-bottom: 2rem;
-}
-
-.ministering-tag strong {
-    color: #d4af37;
-}
-
-/* BUTTONS */
-.cta-button-group {
-    display: flex;
-    gap: 1.2rem;
-    flex-wrap: wrap;
-}
-
-.cta-btn {
-    padding: 1rem 2rem;
-    border-radius: 4px;
-    font-weight: 700;
-    text-decoration: none;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-}
-
-.primary-red {
-    background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
-    color: #ffffff;
-    border: 1px solid #ef4444;
-}
-
-.primary-gold {
-    background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
-    color: #000000;
-    border: 1px solid #ffd700;
-}
-
-.cta-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.3);
-}
-
-/* BISHOP CUTOUT PORTRAIT */
-.bishop-hero-cutout {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    position: relative;
-    z-index: 1;
-}
-
-.bishop-portrait {
-    max-width: 420px;
-    width: 100%;
-    height: auto;
-    filter: drop-shadow(0 10px 30px rgba(0,0,0,0.9));
-    border-radius: 12px;
-}
-
-/* QUICK ACTION BAR */
-.quick-action-bar {
-    max-width: 1100px;
-    margin: -40px auto 4rem auto;
-    background: #12121c;
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    border-radius: 12px;
-    display: flex;
-    justify-content: space-around;
-    padding: 1.5rem;
-    position: relative;
-    z-index: 10;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.8);
-    flex-wrap: wrap;
-    gap: 1.5rem;
-}
-
-.action-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.action-item i {
-    font-size: 2.2rem;
-    color: #d4af37;
-}
-
-.action-item h4 {
-    font-size: 1rem;
-    color: #ffffff;
-}
-
-.action-item p {
-    font-size: 0.8rem;
-    color: #94a3b8;
-}
-
-/* TITLES & SECTIONS */
-section {
-    padding: 4rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.section-title-box {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.sub-heading {
-    color: #d4af37;
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-
-.section-title-box h2 {
-    font-family: 'Cinzel', serif;
-    font-size: 2.2rem;
-    color: #ffffff;
-}
-
-.divider-line {
-    width: 80px;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, #d4af37, transparent);
-    margin: 0.8rem auto 0 auto;
-}
-
-/* ABOUT */
-.about-content-card {
-    background: #12121c;
-    padding: 2.5rem;
-    border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.05);
-    text-align: center;
-    font-size: 1.1rem;
-    color: #cbd5e1;
-}
-
-/* SERMON CARD */
-.sermon-card-premium {
-    background: #12121c;
-    padding: 2rem;
-    border-radius: 12px;
-    border: 1px solid rgba(212, 175, 55, 0.2);
-    position: relative;
-}
-
-.card-badge {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: #d4af37;
-    color: #000;
-    font-size: 0.75rem;
-    font-weight: 800;
-    padding: 0.2rem 0.6rem;
-    border-radius: 4px;
-}
-
-audio {
-    width: 100%;
-    margin-top: 1.5rem;
-}
-
-/* GIVING */
-.pay-cards-row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
-
-.pay-box {
-    background: #12121c;
-    padding: 2rem;
-    border-radius: 12px;
-    text-align: center;
-    border: 1px solid rgba(212, 175, 55, 0.3);
-}
-
-.pay-box h3 {
-    color: #d4af37;
-    margin-bottom: 0.5rem;
-}
-
-.pay-box .num {
-    font-size: 1.4rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-}
-
-/* FOOTER */
-.site-footer {
-    background: #040406;
-    padding: 2.5rem;
-    text-align: center;
-    border-top: 1px solid rgba(255,255,255,0.05);
-}
-
-.footer-socials {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 1rem;
-}
-
-.footer-socials a {
-    color: #d4af37;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-    .hero-banner-section {
-        flex-direction: column;
-        text-align: center;
-        padding-top: 120px;
-    }
-    
-    .gold-gradient-title {
-        font-size: 2.5rem;
-    }
-    
-    .cta-button-group {
-        justify-content: center;
-    }
-    
-    .nav-links {
-        display: none;
-    }
-}
+</body>
+</html>
