@@ -3,26 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GWAJIMANIZATION - Karibu Nyumbani</title>
+    <title>GWAJIMANIZATION - Welcome Home</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <header class="main-header">
-        <div class="logo-box">
-            <span class="logo-text">GWAJIMANIZATION</span>
+        <div class="logo-box" style="display: flex; align-items: center; gap: 10px;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <div style="border: 2px solid #eab308; padding: 4px 8px; border-radius: 4px; display: inline-flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-cross" style="color: #eab308; font-size: 1.1rem;"></i>
+                </div>
+                <span class="logo-text" style="color: #eab308; font-weight: 900; letter-spacing: 1px;">GWAJIMANIZATION</span>
+            </div>
         </div>
         <nav class="nav-links">
-            <a href="#">KUHUSU</a>
+            <a href="#">ABOUT</a>
             <a href="#videos" onclick="showTab('videos')">VIDEO</a>
-            <a href="#audios" onclick="showTab('audios')">SAUTI</a>
+            <a href="#audios" onclick="showTab('audios')">AUDIO</a>
             <a href="#blog" onclick="showTab('blog')">BLOGU</a>
             <a href="#give">SADAKA</a>
             <a href="#contact">MAWASILIANO</a>
         </nav>
         <div class="nav-right">
-            <button onclick="showTab('videos')" class="nav-btn">MASOMO YAPYA</button>
+            <button onclick="showTab('videos')" class="nav-btn">MASOMO MAPYA</button>
         </div>
     </header>
 
@@ -30,8 +35,12 @@
         <div class="hero-container">
             <div class="hero-text">
                 <span class="badge-tag">GWAJIMANIZATION</span>
-                <h1 class="hero-title">SISI SIO KANISA TU,<br><span class="highlight">SISI NI VUGUVUGU</span></h1>
-                <p class="hero-desc">Karibu Gwajimanization. Ungana na Askofu Dr. Josephat Gwajima katika kuchunguza imani, nguvu, na mabadiliko ya maisha.</p>
+                <h1 class="hero-title">SISI SIO KANISA TU,<br><span class="highlight">SISI NI FAMILIA</span></h1>
+                
+                <p class="hero-desc">
+                    Dkt. Josephat Gwajima ni Mchungaji Mkuu wa mojawapo ya makanisa makubwa zaidi Afrika Mashariki. Pia ni Askofu Mkuu na mwanzilishi wa Ufufuo na Uzima Ministries.<br>
+                    Mungu amekuwa akimtumia katika huduma ya kufufua wafu, kuponya wagonjwa, na kutenda ishara na maajabu kwa jina la Yesu Kristo.
+                </p>
 
                 <div class="hero-btns">
                     <button onclick="showTab('videos')" class="btn-dark">TAZAMA VIDEO</button>
@@ -123,31 +132,50 @@
 
     <section id="give" class="give-section">
         <div class="give-container">
-            <span class="sub-title" style="color: #eab308;">SADAKA NA MCHANGO</span>
-            <h2>TOA SADAKA NA TEGEMEZA HUDUMA</h2>
-            <p>Ungana nasi katika kuenea kwa injili na kugusa maisha ya wengi.</p>
+            <span class="sub-title" style="color: #eab308;">SADAKA</span>
+            <h2>TOA SADAKA</h2>
+            <p>Jinsi ya kusapoti huduma ya Askofu Josephat Gwajima</p>
 
-            <div class="payment-grid">
+            <div class="payment-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px;">
                 <div class="pay-card">
                     <h4>M-PESA</h4>
-                    <p class="pay-number">0766 405 739</p>
+                    <p class="pay-number">+255 763 432 025</p>
                 </div>
                 <div class="pay-card">
-                    <h4>TIGO PESA</h4>
-                    <p class="pay-number">0652 291 937</p>
+                    <h4>MIXX BY YAS</h4>
+                    <p class="pay-number">+255 654 808 036</p>
                 </div>
                 <div class="pay-card">
-                    <h4>HALOPESA</h4>
-                    <p class="pay-number">0620 164 130</p>
+                    <h4>AIRTEL</h4>
+                    <p class="pay-number">+255 787 485 811</p>
+                </div>
+                <div class="pay-card">
+                    <h4>NMB BANK</h4>
+                    <p class="pay-number" style="font-size: 1rem;">Acc: 53110014667</p>
                 </div>
             </div>
+
+            <p style="margin-top: 20px; color: #eab308; font-weight: 700; font-size: 0.9rem;">
+                Vyote hivyo majina yanakuja JOSEPHAT GWAJIMA
+            </p>
         </div>
     </section>
 
-    <footer id="contact">
-        <div class="footer-container">
-            <h3>GWAJIMANIZATION</h3>
-            <p>&copy; 2026 Huduma ya Gwajimanization. Haki zote zimehifadhiwa.</p>
+    <footer id="contact" style="padding: 30px 5%; background-color: #080a0e; border-top: 1px solid #12161f;">
+        <div class="footer-container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; max-width: 1200px; margin: 0 auto;">
+            <div>
+                <h3 style="color: #ffffff; margin-bottom: 5px;">GWAJIMANIZATION</h3>
+                <p style="color: #6b7280; font-size: 0.85rem;">&copy; 2026 Gwajimanization Ministry. All rights reserved.</p>
+            </div>
+
+            <div class="social-links" style="display: flex; gap: 15px; align-items: center;">
+                <a href="https://wa.me/255763432025" target="_blank" style="color: #25D366; font-size: 1.2rem; text-decoration: none; display: flex; align-items: center; gap: 6px; font-weight: 600;">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="https://www.tiktok.com/@gwajimanization" target="_blank" style="color: #ffffff; font-size: 1.2rem; text-decoration: none; display: flex; align-items: center; gap: 6px; font-weight: 600;">
+                    <i class="fab fa-tiktok"></i> TikTok
+                </a>
+            </div>
         </div>
     </footer>
 
