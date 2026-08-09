@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body id="home-top">
 
     <header class="main-header">
-        <div class="logo-box" style="display: flex; align-items: center; gap: 10px;">
+        <div class="logo-box" onclick="goHome()" style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
             <div style="display: flex; align-items: center; gap: 8px;">
                 <div style="border: 2px solid #eab308; padding: 4px 8px; border-radius: 4px; display: inline-flex; align-items: center; justify-content: center;">
                     <i class="fas fa-cross" style="color: #eab308; font-size: 1.1rem;"></i>
@@ -18,8 +18,9 @@
                 <span class="logo-text" style="color: #eab308; font-weight: 900; letter-spacing: 1px;">GWAJIMANIZATION</span>
             </div>
         </div>
+
         <nav class="nav-links">
-            <a href="#">ABOUT</a>
+            <a href="javascript:void(0)" onclick="goHome()">ABOUT</a>
             <a href="#videos" onclick="showTab('videos')">VIDEO</a>
             <a href="#audios" onclick="showTab('audios')">AUDIO</a>
             <a href="#blog" onclick="showTab('blog')">BLOGU</a>
@@ -64,6 +65,12 @@
         <div class="cards-grid" id="youtube-auto-grid">
             <p style="color: #9ca3af; text-align: center; width: 100%;">Inaleta video kutoka YouTube...</p>
         </div>
+
+        <div style="text-align: center; margin-top: 35px;">
+            <button onclick="goHome()" class="btn-outline" style="border: 1px solid #eab308; color: #eab308; padding: 10px 24px; border-radius: 6px; font-weight: 700; cursor: pointer;">
+                <i class="fas fa-arrow-up"></i> RUDI JUU / HOME
+            </button>
+        </div>
     </section>
 
     <section id="audios" class="content-section tab-content">
@@ -80,7 +87,6 @@
                     <p class="sermon-speaker">Askofu Josephat Gwajima</p>
                     <audio controls style="width: 100%; margin-top: 10px;">
                         <source src="audio1.mp3" type="audio/mpeg">
-                        Browser yako haiauni audio player.
                     </audio>
                 </div>
             </div>
@@ -107,6 +113,12 @@
                 </div>
             </div>
         </div>
+
+        <div style="text-align: center; margin-top: 35px;">
+            <button onclick="goHome()" class="btn-outline" style="border: 1px solid #eab308; color: #eab308; padding: 10px 24px; border-radius: 6px; font-weight: 700; cursor: pointer;">
+                <i class="fas fa-arrow-up"></i> RUDI JUU / HOME
+            </button>
+        </div>
     </section>
 
     <section id="blog" class="content-section tab-content">
@@ -127,6 +139,12 @@
                     <a href="#" class="btn-outline" style="display: inline-block; padding: 8px 16px;">SOMA ZAIDI</a>
                 </div>
             </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 35px;">
+            <button onclick="goHome()" class="btn-outline" style="border: 1px solid #eab308; color: #eab308; padding: 10px 24px; border-radius: 6px; font-weight: 700; cursor: pointer;">
+                <i class="fas fa-arrow-up"></i> RUDI JUU / HOME
+            </button>
         </div>
     </section>
 
@@ -220,7 +238,7 @@
             });
         }
 
-        // 2. Function ya Onyesha/Ficha Sehemu za Video/Audio/Blog
+        // 2. Function ya Onyesha Sehemu ya Video/Audio/Blog
         function showTab(tabId) {
             const tabs = ['videos', 'audios', 'blog'];
             
@@ -235,6 +253,18 @@
                     }
                 }
             });
+        }
+
+        // 3. Function ya Kurudi Home (Mwanzo)
+        function goHome() {
+            const tabs = ['videos', 'audios', 'blog'];
+            tabs.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    el.classList.remove('active-tab');
+                }
+            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
 </body>
