@@ -21,6 +21,7 @@
 
         <nav class="nav-links">
             <a href="javascript:void(0)" onclick="goHome()">ABOUT</a>
+            <a href="#live" onclick="showTab('live')"><span style="color: #ef4444;">🔴</span> MUBASHARA</a>
             <a href="#videos" onclick="showTab('videos')">VIDEO</a>
             <a href="#audios" onclick="showTab('audios')">AUDIO</a>
             <a href="#blog" onclick="showTab('blog')">BLOGU</a>
@@ -44,8 +45,11 @@
                 </p>
 
                 <div class="hero-btns">
+                    <button onclick="showTab('live')" class="btn-dark" style="background-color: #ef4444; color: #ffffff;">
+                        <i class="fas fa-broadcast-tower"></i> MUBASHARA (LIVE)
+                    </button>
                     <button onclick="showTab('videos')" class="btn-dark">TAZAMA VIDEO</button>
-                    <button onclick="showTab('audios')" class="btn-outline">SIKILIZA SAUTI</button>
+                    <button onclick="showTab('audios')" class="btn-outline">SIKILIZA AUDIO</button>
                     <button onclick="showTab('blog')" class="btn-outline">SOMA BLOGU</button>
                 </div>
             </div>
@@ -53,6 +57,32 @@
             <div class="hero-image-box">
                 <img src="askofu.jpg" alt="Askofu Josephat Gwajima" class="hero-img">
             </div>
+        </div>
+    </section>
+
+    <section id="live" class="content-section tab-content">
+        <div class="section-header">
+            <span class="sub-title" style="color: #ef4444;"><i class="fas fa-circle" style="font-size: 0.6rem; vertical-align: middle;"></i> LIVE STREAMING</span>
+            <h2>MAHUBIRI MUBASHARA (LIVE)</h2>
+        </div>
+
+        <div style="background-color: #12161f; border: 1px solid #ef4444; border-radius: 12px; padding: 20px; max-width: 900px; margin: 0 auto; text-align: center;">
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;">
+                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+                    src="https://www.youtube.com/embed/live_stream?channel=YOUR_CHANNEL_ID" 
+                    title="Gwajimanization Live Stream" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <h3 style="margin-top: 15px; color: #ffffff;">Ibada na Mahubiri Mubashara</h3>
+            <p style="color: #9ca3af; font-size: 0.9rem;">Ungana nasi moja kwa moja kutoka Kanisa la Ufufuo na Uzima.</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 35px;">
+            <button onclick="goHome()" class="btn-outline" style="border: 1px solid #eab308; color: #eab308; padding: 10px 24px; border-radius: 6px; font-weight: 700; cursor: pointer;">
+                <i class="fas fa-arrow-up"></i> RUDI JUU / HOME
+            </button>
         </div>
     </section>
 
@@ -173,8 +203,8 @@
                 </div>
             </div>
 
-            <p style="margin-top: 20px; color: #eab308; font-weight: 700; font-size: 0.9rem;">
-                Vyote hivyo majina yanakuja JOSEPHAT GWAJIMA
+            <p style="margin-top: 20px; color: #eab308; font-weight: 700; font-size: 0.95rem;">
+                Jina litakaloonekana wakati wa kutuma: Josephat Gwajima
             </p>
         </div>
     </section>
@@ -198,7 +228,6 @@
     </footer>
 
     <script>
-        // 1. YouTube Auto Fetching
         const videoIDs = [
             "TxVWgod5YVI",
             "GdffYnGaTgA",
@@ -238,9 +267,8 @@
             });
         }
 
-        // 2. Function ya Onyesha Sehemu ya Video/Audio/Blog
         function showTab(tabId) {
-            const tabs = ['videos', 'audios', 'blog'];
+            const tabs = ['live', 'videos', 'audios', 'blog'];
             
             tabs.forEach(id => {
                 const el = document.getElementById(id);
@@ -255,9 +283,8 @@
             });
         }
 
-        // 3. Function ya Kurudi Home (Mwanzo)
         function goHome() {
-            const tabs = ['videos', 'audios', 'blog'];
+            const tabs = ['live', 'videos', 'audios', 'blog'];
             tabs.forEach(id => {
                 const el = document.getElementById(id);
                 if (el) {
