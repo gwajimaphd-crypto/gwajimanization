@@ -346,3 +346,37 @@ body {
         text-align: center;
     }
 }
+/* MAREKEBISHO YA KAVA ZA YOUTUBE */
+.card-cover-box {
+    width: 100%;
+    height: 180px; /* Ukubwa uliopunguzwa ili kadi zifiti vizuri */
+    overflow: hidden;
+    background-color: #1a1d24;
+    position: relative;
+}
+
+.card-cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Inafanya picha ijipange vizuri bila kujivuta */
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-cover-img {
+    transform: scale(1.05);
+}
+
+.sermon-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 8px 0 4px 0;
+    line-height: 1.3;
+}
+
+.sermon-speaker {
+    color: #9ca3af;
+    font-size: 0.8rem;
+    margin-bottom: 12px;
+}
