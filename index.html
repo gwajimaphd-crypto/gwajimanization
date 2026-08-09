@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GWAJIMANIZATION - Welcome Home</title>
     <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body id="home-top">
 
+    <!-- HEADER / NAVIGATION -->
     <header class="main-header">
         <div class="logo-box" onclick="goHome()" style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
             <div style="display: flex; align-items: center; gap: 8px;">
@@ -33,6 +35,7 @@
         </div>
     </header>
 
+    <!-- HERO SECTION (HOME) -->
     <section class="hero-section">
         <div class="hero-container">
             <div class="hero-text">
@@ -44,13 +47,14 @@
                     Mungu amekuwa akimtumia katika huduma ya kufufua wafu, kuponya wagonjwa, na kutenda ishara na maajabu kwa jina la Yesu Kristo.
                 </p>
 
+                <!-- VIFUNGO VYA HERO SECTION -->
                 <div class="hero-btns">
-                    <button onclick="showTab('live')" class="btn-dark" style="background-color: #ef4444; color: #ffffff;">
+                    <button onclick="showTab('live', this)" class="btn-live">
                         <i class="fas fa-broadcast-tower"></i> MUBASHARA (LIVE)
                     </button>
-                    <button onclick="showTab('videos')" class="btn-dark">TAZAMA VIDEO</button>
-                    <button onclick="showTab('audios')" class="btn-outline">SIKILIZA AUDIO</button>
-                    <button onclick="showTab('blog')" class="btn-outline">SOMA BLOGU</button>
+                    <button onclick="showTab('videos', this)" class="btn-white">TAZAMA VIDEO</button>
+                    <button onclick="showTab('audios', this)" class="btn-white">SIKILIZA AUDIO</button>
+                    <button onclick="showTab('blog', this)" class="btn-white">SOMA BLOGU</button>
                 </div>
             </div>
 
@@ -60,6 +64,7 @@
         </div>
     </section>
 
+    <!-- SECTION 0: MUBASHARA (LIVE STREAMING) -->
     <section id="live" class="content-section tab-content">
         <div class="section-header">
             <span class="sub-title" style="color: #ef4444;"><i class="fas fa-circle" style="font-size: 0.6rem; vertical-align: middle;"></i> LIVE STREAMING</span>
@@ -86,6 +91,7 @@
         </div>
     </section>
 
+    <!-- SECTION 1: VIDEO MESSAGES -->
     <section id="videos" class="content-section tab-content">
         <div class="section-header">
             <span class="sub-title">YOUTUBE MEDIA</span>
@@ -103,6 +109,7 @@
         </div>
     </section>
 
+    <!-- SECTION 2: AUDIO MESSAGES -->
     <section id="audios" class="content-section tab-content">
         <div class="section-header">
             <span class="sub-title">MAKTABA YA SAUTI</span>
@@ -151,6 +158,7 @@
         </div>
     </section>
 
+    <!-- SECTION 3: BLOG / ARTICLES -->
     <section id="blog" class="content-section tab-content">
         <div class="section-header">
             <span class="sub-title">MAKALA MPYA</span>
@@ -178,6 +186,7 @@
         </div>
     </section>
 
+    <!-- SECTION 4: GIVE & SUPPORT (SADAKA) -->
     <section id="give" class="give-section">
         <div class="give-container">
             <span class="sub-title" style="color: #eab308;">SADAKA</span>
@@ -209,6 +218,7 @@
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer id="contact" style="padding: 30px 5%; background-color: #080a0e; border-top: 1px solid #12161f;">
         <div class="footer-container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; max-width: 1200px; margin: 0 auto;">
             <div>
@@ -227,6 +237,7 @@
         </div>
     </footer>
 
+    <!-- SCRIPT ZA YOUTUBE, SHOW/HIDE TAB NA KURUDI HOME -->
     <script>
         const videoIDs = [
             "TxVWgod5YVI",
@@ -267,7 +278,7 @@
             });
         }
 
-        function showTab(tabId) {
+        function showTab(tabId, btnElement) {
             const tabs = ['live', 'videos', 'audios', 'blog'];
             
             tabs.forEach(id => {
@@ -281,6 +292,12 @@
                     }
                 }
             });
+
+            if (btnElement && !btnElement.classList.contains('btn-live')) {
+                const whiteBtns = document.querySelectorAll('.hero-btns .btn-white');
+                whiteBtns.forEach(btn => btn.classList.remove('btn-active'));
+                btnElement.classList.add('btn-active');
+            }
         }
 
         function goHome() {
@@ -291,6 +308,10 @@
                     el.classList.remove('active-tab');
                 }
             });
+
+            const whiteBtns = document.querySelectorAll('.hero-btns .btn-white');
+            whiteBtns.forEach(btn => btn.classList.remove('btn-active'));
+
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
