@@ -1,0 +1,13 @@
+{
+  "background_color": "#0a0b0e",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "Gwajimanization Team",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "Gwajima",
+  "start_url": "/",
+  "theme_color": "#d4af37",
+  "id": "com.gwajimanization.portal",
+  "description": "Portal rasmi ya huduma ya Askofu Josephat Gwajima"
+}
