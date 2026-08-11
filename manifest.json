@@ -9,5 +9,12 @@
   "start_url": "/",
   "theme_color": "#d4af37",
   "id": "com.gwajimanization.portal",
-  "description": "Portal rasmi ya huduma ya Askofu Josephat Gwajima"
+  "description": "Portal rasmi ya huduma ya Askofu Josephat Gwajima",
+  "icons": [
+    {
+      "src": "launchericon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }
